@@ -24,6 +24,7 @@ var materialFoto = new Swiper(".js--material-foto", {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: false,
+    // mousewheel: true,
     pagination: true,
     navigation: {
         nextEl: '.swiper-button-next',
@@ -156,7 +157,7 @@ let tl = gsap.timeline({
 
 
 var initMode;
-let addTime = 1300;
+let addTime = 2300;
 
 let st1, st2, st3;
 let tl1 = gsap.timeline({});
@@ -324,7 +325,7 @@ function initScrollAnimationDesktop(){
         y: '-115%',
         duration:  2,
         ease: "none",
-    } , ">=+0.2");
+    } , ">+=0.2");
     // tl1.fromTo(".section6", {
     //     y: '100%',
     // }, {
@@ -340,7 +341,7 @@ function initScrollAnimationDesktop(){
         y: -s6Height,
         duration: Math.abs((scHeight - s6Height) / 460) + 1,
         ease: "none",
-    }, ">=+0.2");
+    }, ">+=0.2");
     // tl1.addLabel('1941','+=0');
     // tl1.fromTo(".section3__block--1", {
     //     x: "0",

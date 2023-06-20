@@ -816,6 +816,7 @@ var materialFoto = new swiper__WEBPACK_IMPORTED_MODULE_1__.Swiper(".js--material
   slidesPerView: 1,
   spaceBetween: 0,
   loop: false,
+  // mousewheel: true,
   pagination: true,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -931,7 +932,7 @@ var tl = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({
   }
 });
 var initMode;
-var addTime = 1300;
+var addTime = 2300;
 var st1, st2, st3;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({});
 var tl2 = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({});
@@ -1084,7 +1085,7 @@ function initScrollAnimationDesktop() {
     y: '-115%',
     duration: 2,
     ease: "none"
-  }, ">=+0.2"); // tl1.fromTo(".section6", {
+  }, ">+=0.2"); // tl1.fromTo(".section6", {
   //     y: '100%',
   // }, {
   //     y: '0%',
@@ -1100,7 +1101,7 @@ function initScrollAnimationDesktop() {
     y: -s6Height,
     duration: Math.abs((scHeight - s6Height) / 460) + 1,
     ease: "none"
-  }, ">=+0.2"); // tl1.addLabel('1941','+=0');
+  }, ">+=0.2"); // tl1.addLabel('1941','+=0');
   // tl1.fromTo(".section3__block--1", {
   //     x: "0",
   // }, {
