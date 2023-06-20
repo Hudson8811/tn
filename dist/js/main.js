@@ -1092,16 +1092,16 @@ function initScrollAnimationDesktop() {
   //     duration: 1,
   //     ease: "none",
   // } , ">+=0.5");
-
-  tl1.fromTo(".section6", {
-    y: "0",
-    top: "100%"
-  }, {
-    top: "0",
-    y: -s6Height,
-    duration: Math.abs((scHeight - s6Height) / 460) + 1,
-    ease: "none"
-  }, ">+=0.2"); // tl1.addLabel('1941','+=0');
+  // tl1.fromTo(".section6", {
+  //     y: "0",
+  //     top: "100%"
+  // }, {
+  //     top: "0",
+  //     y: -s6Height,
+  //     duration: Math.abs((scHeight - s6Height) / 460) + 1,
+  //     ease: "none",
+  // }, ">+=0.2");
+  // tl1.addLabel('1941','+=0');
   // tl1.fromTo(".section3__block--1", {
   //     x: "0",
   // }, {
