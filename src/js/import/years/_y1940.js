@@ -289,21 +289,21 @@ function initScrollAnimationDesktop(){
         y: '-102%',
         duration:  2,
         ease: "none",
-    } , ">=+0.2");
+    } , ">+=0.2");
     tl1.fromTo(".section3", {
         y: '100%',
     }, {
         y: '0%',
         duration: 1,
         ease: "none",
-    } , ">=-0.2");
+    } , ">-=0.2");
     tl1.fromTo(".section3__title", {
         y: '100vh',
     }, {
         y: '-102%',
         duration:  2,
         ease: "none",
-    } , ">=+0.2");
+    } , ">+=0.2");
 
     tl1.fromTo(".section4", {
         y: '100%',
@@ -311,7 +311,7 @@ function initScrollAnimationDesktop(){
         y: '0%',
         duration: 1,
         ease: "none",
-    } , ">");
+    } , ">-=2");
     tl1.fromTo(".section5", {
         y: '100%',
     }, {
