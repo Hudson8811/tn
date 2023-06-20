@@ -1,0 +1,201 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Поздравление"
+	- const hideYears = true
+
+block content
+	.wrapper.congratulations-page
+		include ../../blocks/modules/header/header
+		include ../../blocks/modules/sidebar/sidebar
+		include ../../blocks/modules/form/form
+
+		.overlay
+
+		section.first-screen
+			.container.container--full.first-screen__container
+				.first-screen__text Каждый может стать частью большой истории. <span>Поблагодарите университет и внесите свой вклад в его развитие</span>
+				.first-screen__title.js-marquee Поздравления университета
+				a.first-screen__anchor.anchor(href='#list') список <br> поздравлений
+				.first-screen__buttons.d-none-desktop-flex
+					a(href='#') поддержать
+					a.js-congrat(href='#') поздравить
+
+		section#list.list-block
+			form
+				.list-block__line-block
+					.container.list-block__container-top
+						.list-block__title список <br> поздравлений
+						label
+							+icon('search')
+							input(type='search', placeholder='Введите имя')
+
+
+				.list-block__sort-block
+					.container
+						.list-block__sort
+							.list-block__number <span class="congrat-num">20</span> поздравлений
+							select
+								option По алфавиту а - я
+								option По алфавиту я - а
+								option По новизне
+			.list-block__grid-block
+				.container
+
+					//- .list-block__grid
+					//- 	.card-person.list-block__item
+					//- 		a.link-area(href='#', target='_blank')
+					//- 		.card-person__image
+					//- 			img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
+					//- 		.card-person__content
+					//- 			.card-person__content-group
+					//- 				.card-person__name Аделина Имамутдинова
+					//- 				.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+					//- 			+button('card-person__button')
+					//- 	.card-person.list-block__item
+					//- 		a.link-area(href='#', target='_blank')
+					//- 		.card-person__image
+					//- 			img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
+					//- 		.card-person__content
+					//- 			.card-person__content-group
+					//- 				.card-person__name Аделина Имамутдинова
+					//- 				.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+					//- 			+button('card-person__button')
+					//- 	.card-person.list-block__item
+					//- 		a.link-area(href='#', target='_blank')
+					//- 		.card-person__image
+					//- 			img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
+					//- 		.card-person__content
+					//- 			.card-person__content-group
+					//- 				.card-person__name Аделина Имамутдинова
+					//- 				.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+					//- 			+button('card-person__button')
+					//- 	.card-person.list-block__item
+					//- 		a.link-area(href='#', target='_blank')
+					//- 		.card-person__image
+					//- 			img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
+					//- 		.card-person__content
+					//- 			.card-person__content-group
+					//- 				.card-person__name Аделина Имамутдинова
+					//- 				.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+					//- 			+button('card-person__button')
+					//- 	.card-person.list-block__item
+					//- 		a.link-area(href='#', target='_blank')
+					//- 		.card-person__image
+					//- 			img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
+					//- 		.card-person__content
+					//- 			.card-person__content-group
+					//- 				.card-person__name Аделина Имамутдинова
+					//- 				.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+					//- 			+button('card-person__button')
+					//- 	.card-person.list-block__item
+					//- 		a.link-area(href='#', target='_blank')
+					//- 		.card-person__image
+					//- 			img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
+					//- 		.card-person__content
+					//- 			.card-person__content-group
+					//- 				.card-person__name Аделина Имамутдинова
+					//- 				.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+					//- 			+button('card-person__button')
+					.grid
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+								+button('card-person__button')
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person__2.png', srcset='img/person__2.png 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+								+button('card-person__button')
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person__3.png', srcset='img/person__3.png 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+								+button('card-person__button')
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person__4.png', srcset='img/person__4.png 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+								+button('card-person__button')
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person__5.png', srcset='img/person__5.png 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01): 
+								+button('card-person__button')
+								
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+								+button('card-person__button')
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person__3.png', srcset='img/person__3.png 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01): 
+								+button('card-person__button')
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+								+button('card-person__button')
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person__3.png', srcset='img/person__3.png 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01): 
+								+button('card-person__button')
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+								+button('card-person__button')
+						.card-person.list-block__item
+							a.link-area(href='#', target='_blank')
+							.card-person__image
+								img(src='img/person__3.png', srcset='img/person__3.png 2x', alt='')
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01): 
+								+button('card-person__button')
+															
