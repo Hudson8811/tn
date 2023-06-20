@@ -356,7 +356,7 @@ function initScrollAnimationDesktop(){
         pin: true,
         start: "top top",
         end: () =>   "+="+addTime+"%",
-        scrub: 2.5,
+        scrub: 0.5,
         animation: tl1,
     });
 }

@@ -1117,7 +1117,7 @@ function initScrollAnimationDesktop() {
     end: function end() {
       return "+=" + addTime + "%";
     },
-    scrub: 2.5,
+    scrub: 0.5,
     animation: tl1
   });
 }
