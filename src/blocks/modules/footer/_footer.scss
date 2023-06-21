@@ -1,0 +1,124 @@
+.footer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: #252522;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: vw(44);
+  padding-right: vw(44);
+  padding-bottom: vw(28);
+  &__wrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: #252522;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding-top: vw(29);
+    margin-bottom: vw(29);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  &__top {
+    justify-content: flex-start;
+    align-items: flex-start;
+    &--col {
+      &:nth-child(1) {
+        width: 45%;
+      }
+      &:nth-child(2) {
+        width: 55%;
+      }
+    }
+  }
+  &__bottom {
+    justify-content: flex-start;
+    align-items: flex-start;
+    &--item {
+      position: relative;
+      display: inline-block;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: all 0.3s;
+      margin-right: vw(50);
+      &:hover {
+        transition: all 0.3s;
+        color: $red;
+      }     
+    }
+    &--col {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      &:nth-child(1) {
+        width: 45%;
+      }
+      &:nth-child(2) {
+        width: 27.5%;
+      }
+      &:nth-child(3) {
+        width: 27.5%;
+        justify-content: flex-end;
+        .footer__bottom--item {
+          margin-right: 0;
+        }
+      }
+    } 
+
+  }
+  &__soc {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &--title {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: vw(14);
+      line-height: vw(17);
+      color: #FFFFFF; 
+      margin-bottom: vw(20);    
+    }
+    &--group {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;      
+    }
+    &--link {
+      position: relative;
+      display: block;
+      margin-right: vw(20);
+      transition: all 0.3s;
+      svg {
+        position: relative;
+        display: block;
+        width: 100%;
+      }
+      path {
+        transition: all 0.3s;
+        fill: rgba(255, 255, 255, 0.2);
+      }
+      &:hover {
+        path {
+          transition: all 0.3s;
+          fill: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+}

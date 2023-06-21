@@ -157,7 +157,7 @@ let tl = gsap.timeline({
 
 
 var initMode;
-let addTime = 2300;
+let addTime = 1500;
 
 let st1, st2, st3;
 let tl1 = gsap.timeline({});
@@ -356,7 +356,7 @@ function initScrollAnimationDesktop(){
         pin: true,
         start: "top top",
         end: () =>   "+="+addTime+"%",
-        scrub: 0.5,
+        scrub: 0, //2.5
         animation: tl1,
     });
 }

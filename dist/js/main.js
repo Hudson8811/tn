@@ -932,7 +932,7 @@ var tl = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({
   }
 });
 var initMode;
-var addTime = 2300;
+var addTime = 1500;
 var st1, st2, st3;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({});
 var tl2 = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({});
@@ -1117,7 +1117,8 @@ function initScrollAnimationDesktop() {
     end: function end() {
       return "+=" + addTime + "%";
     },
-    scrub: 0.5,
+    scrub: 0,
+    //2.5
     animation: tl1
   });
 }

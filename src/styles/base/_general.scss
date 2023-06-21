@@ -62,6 +62,15 @@ img{
 .blockTitle{
 	@include title;
 }
+.blockText {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: vw(20);
+	line-height: vw(24);
+	color: #464646;
+}
+
 
 .horisontalBlock{
 	@include block;
