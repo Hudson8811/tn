@@ -34,12 +34,8 @@
 	letter-spacing: -0.035em;
 	font-weight: 600;
 	@include max(md){
-		font-size: vw2(25);
-	}
-	@include max(sm){
-		font-size: vw3(24);
-		line-height: 1.03;
-		letter-spacing: -0.01em;
+		font-size: vw2(26);
+		line-height: vw2(26);
 	}
 	span{
 		opacity: 0.25;

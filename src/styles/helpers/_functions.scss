@@ -29,9 +29,5 @@
 }
 
 
-@function vw2($px, $resolutiond: 768) {
-  $temp: #{math.div($px, $resolutiond) * 100};
-  @return $temp +'vw';
-}
 
 

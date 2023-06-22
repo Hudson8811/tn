@@ -61,6 +61,17 @@ img{
 
 .blockTitle{
 	@include title;
+	&--desc {
+		@include max(md){
+			display: none !important;
+		}		
+	}
+	&--mob {
+		display: none;
+		@include max(md){
+			display: block;
+		}		
+	}
 }
 .blockText {
 	font-family: 'Inter';
@@ -69,6 +80,10 @@ img{
 	font-size: vw(20);
 	line-height: vw(24);
 	color: #464646;
+	@include max(md){
+		font-size: vw2(12);
+		line-height: vw2(15);
+	}
 }
 
 

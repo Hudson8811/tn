@@ -1055,14 +1055,14 @@ function initScrollAnimationDesktop() {
     opacity: 1
   }, {
     opacity: 0.25,
-    duration: 1.5,
+    duration: 1,
     ease: "none"
-  }, "<+=0.3");
+  }, "<+=0.6");
   tl1.fromTo(".section2__title span:nth-child(3)", {
     opacity: 0.25
   }, {
     opacity: 1,
-    duration: 0.35,
+    duration: 0.15,
     ease: "none"
   }, ">-=0.6");
   tl1.fromTo(".section2__title span:nth-child(3)", {
@@ -1071,12 +1071,12 @@ function initScrollAnimationDesktop() {
     opacity: 0.25,
     duration: 0.25,
     ease: "none"
-  }, ">");
+  }, ">+=0.5");
   tl1.fromTo(".section2__title span:nth-child(4)", {
     opacity: 0.25
   }, {
     opacity: 1,
-    duration: 0.35,
+    duration: 0.15,
     ease: "none"
   }, ">");
   tl1.fromTo(".section2__title span:nth-child(4)", {
@@ -1085,12 +1085,12 @@ function initScrollAnimationDesktop() {
     opacity: 0.25,
     duration: 0.25,
     ease: "none"
-  }, ">");
+  }, ">+=0.5");
   tl1.fromTo(".section2__title span:nth-child(6)", {
     opacity: 0.25
   }, {
     opacity: 1,
-    duration: 0.35,
+    duration: 0.15,
     ease: "none"
   }, ">");
   tl1.fromTo(".section3", {
@@ -1165,9 +1165,27 @@ function initScrollAnimationDesktop() {
   });
 }
 
-function initScrollAnimationTablet() {}
+function initScrollAnimationTablet() {// gsap.to(".fullPageOverlay", {
+  // 	duration: 1,
+  // 	autoAlpha: 0,
+  // 	ease: "none",
+  // 	onComplete: function () {
+  // 			$('.fullPageOverlay').removeClass('active');
+  // 			$('body').addClass('active');
+  // 	}
+  // });
+}
 
-function initScrollAnimationMobile() {}
+function initScrollAnimationMobile() {// gsap.to(".fullPageOverlay", {
+  // 	duration: 1,
+  // 	autoAlpha: 0,
+  // 	ease: "none",
+  // 	onComplete: function () {
+  // 			$('.fullPageOverlay').removeClass('active');
+  // 			$('body').addClass('active');
+  // 	}
+  // });
+}
 
 function checkYearValue() {
   if (yValue !== null) {
