@@ -1237,6 +1237,15 @@
 				object-position: center center;
 			}
 		}
+		&--white {
+			.result__picture-item--text {
+				position: absolute;
+				top: vw(21);
+				left: vw(15);
+				color: #fff;
+				max-width: vw(202);
+			}
+		}
 		&--text {
 			width: 100%;
 			max-width: vw(486);

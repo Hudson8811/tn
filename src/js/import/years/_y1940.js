@@ -287,16 +287,58 @@ function initScrollAnimationDesktop(){
         y: '100vh',
     }, {
         y: '-102%',
-        duration:  2,
+        duration:  3.6,
         ease: "none",
     } , ">+=0.2");
+    tl1.fromTo(".section2__title span:nth-child(1)", {
+        opacity: 1
+    }, {
+        opacity: 0.25,
+        duration:  1.5,
+        ease: "none",
+    } , "<+=0.3");
+    tl1.fromTo(".section2__title span:nth-child(3)", {
+        opacity: 0.25,
+    }, {
+        opacity: 1,
+        duration:  0.35,
+        ease: "none",
+    } , ">-=0.6");
+    tl1.fromTo(".section2__title span:nth-child(3)", {
+        opacity: 1,
+    }, {
+        opacity: 0.25,
+        duration:  0.25,
+        ease: "none",
+    } , ">");
+    tl1.fromTo(".section2__title span:nth-child(4)", {
+        opacity: 0.25,
+    }, {
+        opacity: 1,
+        duration:  0.35,
+        ease: "none",
+    } , ">");
+    tl1.fromTo(".section2__title span:nth-child(4)", {
+        opacity: 1,
+    }, {
+        opacity: 0.25,
+        duration:  0.25,
+        ease: "none",
+    } , ">");
+    tl1.fromTo(".section2__title span:nth-child(6)", {
+        opacity: 0.25,
+    }, {
+        opacity: 1,
+        duration:  0.35,
+        ease: "none",
+    } , ">");
     tl1.fromTo(".section3", {
         y: '100%',
     }, {
         y: '0%',
         duration: 1,
         ease: "none",
-    } , ">-=0.2");
+    } , ">+=1");
     tl1.fromTo(".section3__title", {
         y: '100vh',
     }, {
