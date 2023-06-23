@@ -996,22 +996,22 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
 });
 
 function initScrollAnimationDesktop() {
-  tl.to(".loader__center", {
-    y: "-100%",
-    duration: 1.5,
-    delay: 1,
-    ease: "power3.in"
-  });
-  tl.to(".loader__back", {
-    y: "-100%",
-    duration: 1.5,
-    ease: "power3.in"
-  }, ">-1.3");
+  // tl.to(".loader__center", {
+  //     y: "-100%",
+  //     duration: 1.5,
+  //     delay: 1,
+  //     ease: "power3.in",
+  // });
+  // tl.to(".loader__back", {
+  //     y: "-100%",
+  //     duration:  1.5,
+  //     ease: "power3.in",
+  // } , ">-1.3");
   tl.from(".section1__house", {
     y: '0%',
     duration: 1.7,
     ease: "power1.inOut"
-  }, "<");
+  }, "0");
   tl.fromTo(".section1__title", {
     y: '100vh',
     autoAlpha: 0

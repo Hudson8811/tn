@@ -8,12 +8,12 @@ block head
 	include ../blocks/modules/overlay/overlayStyle
 block content
 	.fullPageOverlay
-	include ../blocks/modules/loader/loader
+	//- include ../blocks/modules/loader/loader
 	//- .wrapper
 		//- include ../blocks/modules/sidebar/sidebar
 
 	.scroll-page.home-page
-
+		include ../blocks/modules/mobnav/mobnav
 		.section1
 			include ../blocks/modules/header/header
 			.section1__house
@@ -39,7 +39,7 @@ block content
 				!="Равномерное и долговечное покрытие. <br><span>Насыщенность цвета. Полное соответствие RAL. Высокая укрывистость.</span>"
 		.section3
 			.section3__subtitle.subBlockTitle
-				!="Аэрозольные краски - это универсальное решение для окраски различных поверхностей. Они позволяют быстро и легко изменить цвет и внешний вид различных предметов из:"
+				!="Для окраски различных поверхностей из:"
 			.section3__col.section3__col--one
 				.swiper.material.js--material
 					.swiper-wrapper
@@ -50,16 +50,15 @@ block content
 						.swiper-slide.material-slide
 							.material-slide__item Гипс
 						.swiper-slide.material-slide
-							.material-slide__item Картона
-						.swiper-slide.material-slide
 							.material-slide__item Камня
-						.swiper-slide.material-slide
-							.material-slide__item Бетона
 						.swiper-slide.material-slide
 							.material-slide__item Пластика
 			.section3__col.section3__col--two
 				.swiper.material-foto.js--material-foto
 					.swiper-wrapper
+						.swiper-slide.material-foto__slide
+							picture
+								img(src="img/main/material-foto--3.png" alt="")
 						.swiper-slide.material-foto__slide
 							picture
 								img(src="img/main/material-foto--1.png" alt="")
@@ -68,19 +67,10 @@ block content
 								img(src="img/main/material-foto--2.png" alt="")
 						.swiper-slide.material-foto__slide
 							picture
-								img(src="img/main/material-foto--3.png" alt="")
-						.swiper-slide.material-foto__slide
-							picture
 								img(src="img/main/material-foto--4.png" alt="")
 						.swiper-slide.material-foto__slide
 							picture
 								img(src="img/main/material-foto--5.png" alt="")
-						.swiper-slide.material-foto__slide
-							picture
-								img(src="img/main/material-foto--3.png" alt="")
-						.swiper-slide.material-foto__slide
-							picture
-								img(src="img/main/material-foto--4.png" alt="")
 					.swiper-button-next.material-foto--button
 					.swiper-button-prev.material-foto--button
 		.section4
@@ -236,14 +226,14 @@ block content
 										.prep__item--picture-wrap--col
 											.prep__item--picture 
 												picture
-														source(srcset="img/main/surfaces--4.png" media="(max-width: 699px)")
-														img(src="img/main/surfaces--4.png" alt="")
+														source(srcset="img/main/prep--1.png" media="(max-width: 699px)")
+														img(src="img/main/prep--1.png" alt="")
 											.prep__item--picture--subtitle.blockText Краска хорошо перемешена, цвета совпадают
 										.prep__item--picture-wrap--col
 											.prep__item--picture 
 												picture
-														source(srcset="img/main/surfaces--5.png" media="(max-width: 699px)")
-														img(src="img/main/surfaces--5.png" alt="")
+														source(srcset="img/main/prep--2.png" media="(max-width: 699px)")
+														img(src="img/main/prep--2.png" alt="")
 											.prep__item--picture--subtitle.blockText Краска не перемешена, цвета не совпадают
 
 								.prep__item
@@ -339,16 +329,17 @@ block content
 		.section7
 			.section7__title.blockTitle
 					!="Покрась <span><br>уже сейчас</span>"
-			.button.section7__button Купить онлайн
 			.section7__picture 
 				picture
-					source(srcset="img/main/balon.png" media="(max-width: 699px)")
+					source(srcset="img/main/balon--mob.png" media="(max-width: 699px)")
 					img(src="img/main/balon.png" alt="")
+			.button.section7__button Купить онлайн
 		footer.footer 
 			.footer__wrap
 				.footer__row.footer__top
 					.footer__top--col
-						img(src="img/svg/logo.svg" alt="logo")
+						.footer__top--logo
+							img(src="img/svg/logo.svg" alt="logo")
 					.footer__top--col
 						.footer__soc
 							.footer__soc--title ТЕХНОНИКОЛЬ в социальных сетях
@@ -401,7 +392,6 @@ block content
 						a(href="").footer__bottom--item 2022 © ТЕХНОНИКОЛЬ
 						a(href="").footer__bottom--item Условия пользования
 					.footer__bottom--col
-						a(href="").footer__bottom--item Краска технониколь
 						a(href="").footer__bottom--item О корпорации 
 					.footer__bottom--col
 						a(href="").footer__bottom--item Интернет-магазин

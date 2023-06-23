@@ -9,6 +9,11 @@
   padding-left: vw(44);
   padding-right: vw(44);
   padding-bottom: vw(28);
+  @include max(md) {
+    padding-left: vw2(20);
+    padding-right: vw2(20);
+    padding-bottom: vw2(0);   
+  }
   &__wrap {
     position: relative;
     display: flex;
@@ -25,33 +30,75 @@
     padding-top: vw(29);
     margin-bottom: vw(29);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    @include max(md) {
+      border-top: none;
+      margin-bottom: vw2(23);
+    }
   }
   &__top {
     justify-content: flex-start;
     align-items: flex-start;
+    @include max(md) {
+      flex-flow: column nowrap;
+    }
     &--col {
       &:nth-child(1) {
-        width: 45%;
+        width: 50%;
+        @include max(md) {
+          width: 100%;
+        }
       }
       &:nth-child(2) {
-        width: 55%;
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        @include max(md) {
+          width: 100%;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+      }
+    }
+    &--logo {
+      position: relative;
+      width: vw(217);
+      @include max(md) {
+        width: vw2(151);
+        margin-bottom: vw2(37);
+        margin-top: vw2(23);
+        height: auto;
+      }
+      img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: left center;
       }
     }
   }
   &__bottom {
     justify-content: flex-start;
     align-items: flex-start;
+    @include max(md) {
+      flex-flow: column nowrap;
+    }
     &--item {
       position: relative;
       display: inline-block;
       font-style: normal;
       font-weight: 600;
-      font-size: 14px;
-      line-height: 17px;
+      font-size: vw(14);
+      line-height: vw(17);
       color: #FFFFFF;
       text-decoration: none;
       transition: all 0.3s;
       margin-right: vw(50);
+      @include max(md) {
+        font-size: vw2(12);
+        line-height: vw2(15);
+      }
       &:hover {
         transition: all 0.3s;
         color: $red;
@@ -62,17 +109,33 @@
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
+      @include max(md) {
+        white-space: nowrap;
+        flex-flow: column nowrap;
+        margin-bottom: vw2(45);
+      }
       &:nth-child(1) {
         width: 45%;
+        @include max(sm) {
+          width: 100%;
+        }
       }
       &:nth-child(2) {
         width: 27.5%;
+        @include max(sm) {
+          width: 100%;
+        }
       }
       &:nth-child(3) {
         width: 27.5%;
         justify-content: flex-end;
         .footer__bottom--item {
           margin-right: 0;
+        }
+        @include max(sm) {
+          width: 100%;
+          justify-content: flex-start;
+          margin-bottom: vw2(35);
         }
       }
     } 
@@ -82,16 +145,24 @@
     position: relative;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
     align-items: flex-start;
+    justify-content: flex-end;
     &--title {
+      width: 100%;
       font-family: 'Inter';
       font-style: normal;
       font-weight: 600;
       font-size: vw(14);
       line-height: vw(17);
       color: #FFFFFF; 
-      margin-bottom: vw(20);    
+      margin-bottom: vw(20); 
+      text-align: right;
+      @include max(md) {
+        text-align: left;
+        font-size: vw2(12);
+        line-height: vw2(15);
+        margin-bottom: vw2(20); 
+      }  
     }
     &--group {
       position: relative;
@@ -102,12 +173,24 @@
     &--link {
       position: relative;
       display: block;
-      margin-right: vw(20);
+      margin-left: vw(20);
       transition: all 0.3s;
+      @include max(md) {
+        margin-left: vw2(10);
+      }
+      @include max(sm) {
+        margin-left: vw2(0);
+        margin-right: vw2(10);
+      }
+
       svg {
         position: relative;
         display: block;
         width: 100%;
+        @include max(md) {
+          margin-right: vw2(5);
+          height: auto;
+        } 
       }
       path {
         transition: all 0.3s;

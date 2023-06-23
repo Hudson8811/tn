@@ -213,10 +213,15 @@ img{
 		background-color: $red;
 		border: 1px solid $red;
 	}
-	@include max(lg) {
-	}
 
 	@include max(sm) {
+		max-width: vw2(188);
+		height: vw2(44);
+		border-radius: vw2(8);
+		font-style: normal;
+		font-weight: 500;
+		font-size: vw2(12);
+		line-height: vw2(15);
 	}
 
 }

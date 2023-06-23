@@ -31,7 +31,8 @@
 
 	@include max(md) {
 		position: relative;
-		min-height: 100vh;
+		height: auto;
+		min-height: auto;
 		top: auto;
 		left: auto;
 	}
@@ -67,25 +68,24 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
+			position: relative;
+			height: auto;
+			min-height: vw2(400);
 		}
 
 
 		img,picture {
 			display: block;
+			position: absolute;
 			width: 100%;
 			height: 100%;
-			object-position: right top;
+			object-position: right bottom;
 			object-fit: cover;
 			@include max(md) {
-				height: 100%;
-				object-position: center top;
-				object-fit: cover;
+				object-position: center bottom;
 			}
 		}
 
-		img {
-			width: 100%;
-		}
 	}
 
 	&__dates {
@@ -198,7 +198,16 @@
 			width: 100%;
 		}
 	}
+	.video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+	&__video {
+		width: 100vw;
 
+	}
 
 }
 .section3 {
@@ -266,7 +275,7 @@
 		}
 	}
 	&__subtitle {
-		width: vw(383);
+		width: vw(440);
 		position: absolute;
 		left: vw(36);
 		top: vw(36);
@@ -514,11 +523,16 @@
 		border-radius: 50%;
 		color: #000;
 		z-index: 20;
-
+		@include max(sm) {
+			width: vw2(38);
+			height: vw2(38);
+		}
 		&::after {
 			font-size: vw(10);
 			color: #000;
-
+			@include max(sm) {
+				font-size: vw2(10);
+			}
 		}
 	}
 
@@ -846,6 +860,7 @@
 	left: 0;
 	width: 100%;
 	height: 100vh;
+	min-height: vw(1000);
 	overflow: hidden;
 	z-index: 25;
 	will-change: transform, opacity;
@@ -860,9 +875,27 @@
 	padding-bottom: vw(46);
 	@include max(md) {
 		position: relative;
-		min-height: 100vh;
+		min-height: vw(990);
+		height: auto;
 		top: auto;
 		left: auto;
+		padding-top: vw2(20);
+		padding-left: vw2(20);
+		padding-right: vw2(20);
+		padding-bottom: vw2(0);
+	}
+	@include max(sm) {
+		position: relative;
+		min-height: vw2(390);
+		height: auto;
+		top: auto;
+		left: auto;
+		justify-content: flex-end;
+		align-items: flex-end;
+		padding-top: vw2(20);
+		padding-left: vw2(20);
+		padding-right: vw2(20);
+		padding-bottom: vw2(23);
 	}
 	&__picture {
 		position: absolute;
@@ -873,6 +906,20 @@
 		right: 0;
 		bottom: 0;
 		z-index: 30;
+		@include max(md) {
+			border-bottom: 1px solid #C7C7C7;
+		}
+		@include max(sm) {
+			bottom: vw2(84);
+			z-index: 0;
+			width: calc(100% - vw2(40));
+			margin-left: vw2(20);
+			margin-right: vw2(20);
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			border-bottom: 1px solid #C7C7C7;
+		}
 		img,picture {
 			display: block;
 			width: 100%;
@@ -883,6 +930,9 @@
 				height: 100%;
 				object-position: center top;
 				object-fit: cover;
+			}
+			@include max(sm) {
+				width: vw2(94);
 			}
 		}
 	}
@@ -911,26 +961,9 @@
 		line-height: 85.02%;
 		letter-spacing: -0.06em;
 		font-weight: 600;
-		// font-style: normal;
-		// font-weight: 400;
-		// font-size: vw(20);
-		// line-height: vw(24);
-	}
-	&__video {
-		position: relative;
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-start;
-		width: 100%;
-		// background: #D9D9D9;
-		// border-radius: 33px;
-		min-height: vw(410);
-		.video {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center center;
-			border-radius: 33px;
+		@include max(md) {
+			left: vw2(20);
+			top: vw2(20);
 		}
 	}
 	&__button {
@@ -938,6 +971,13 @@
 		top: vw(71);
 		right: vw(58);
 		background: #fff;
+		@include max(sm) {
+			position: relative;
+			top: auto;
+			right: auto;
+			width: 100%;
+			max-width: 100%;
+		}		
 	}
 
 }
@@ -950,14 +990,19 @@
 	align-items: flex-start;
 	flex-flow: column nowrap;
 	margin-top: vw(75);
+	@include max(md) {
+		margin-top: vw2(44);
+	}
 }
 .accordion {
 	width: 100%;
 	overflow: hidden;
 	position: relative;
 	margin-bottom: vw(28);
-
 	display: block;
+	@include max(md) {
+		margin-bottom: vw2(0);
+	}
 	&__intro {
 		position: relative;
 		cursor: pointer;
@@ -973,6 +1018,12 @@
 		padding-top: vw(23);
 		padding-bottom: vw(65);
 		border-top: 1px solid  rgba(0, 0, 0, 0.2);
+		@include max(md) {
+			font-size: vw2(12);
+			line-height: vw2(15);
+			padding-top: vw2(10);
+			padding-bottom: vw2(20);
+		}
 		p {
 			position: relative;
 			display: inline-block;
@@ -982,6 +1033,11 @@
 			font-weight: 600;
 			font-size: vw(28);
 			line-height: vw(34);
+			@include max(md) {
+				font-size: vw2(12);
+				line-height: vw2(15);
+				max-width: vw2(91);
+			}
 		}
 		.accordion__intro__img {
 			position: relative;
@@ -994,12 +1050,30 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			@include max(sm) {
+				width: vw2(38);
+				min-width: vw2(38);
+				height: vw2(38);
+				min-height: vw2(38);
+			}
 			svg {
 				animation-name: rotationClose;
 				animation-duration: .2s;
 				animation-iteration-count: 1;
 				animation-timing-function: linear;
-				animation-fill-mode: forwards;				
+				animation-fill-mode: forwards;
+				@include max(md) {
+					width: vw(14);
+					min-width: vw(14);
+					height: vw(8);
+					min-height: vw(8);
+				}
+				@include max(sm) {
+					width: vw2(10);
+					min-width: vw2(10);
+					height: vw2(7);
+					min-height: vw2(7);
+				}			
 			}
 			&:hover {
 				background: $red;
@@ -1078,6 +1152,9 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	width: 100%;
+	@include max(md) {
+		flex-flow: column nowrap;
+	}		
 	&__title {
 		font-family: 'Inter';
 		font-style: normal;
@@ -1089,7 +1166,12 @@
 		display: inline-block;
 		width: 100%;
 		max-width: vw(354);
-		color: #191919;		
+		color: #191919;
+		@include max(md) {
+			font-size: vw2(14);
+			line-height: vw2(15);
+			max-width: 100%;
+		}			
 	}
 	&__col {
 		position: relative;
@@ -1098,9 +1180,17 @@
 		flex-flow: column nowrap;
 		&:nth-child(1) {
 			max-width: vw(628);
+			@include max(md) {
+				width: 100%;
+				max-width: 100%;
+			}		
 		}
 		&:nth-child(2) {
 			max-width: vw(593);
+			@include max(md) {
+				width: 100%;
+				max-width: 100%;
+			}	
 		}
 	}
 	&__item {
@@ -1196,6 +1286,9 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	width: 100%;
+	@include max(md) {
+		flex-flow: column nowrap;
+	}		
 	&__title {
 		font-family: 'Inter';
 		font-style: normal;
@@ -1216,6 +1309,10 @@
 		flex-flow: column nowrap;
 		&:nth-child(1) {
 			max-width: vw(745);
+			@include max(md) {
+				width: 100%;
+				max-width: 100%;
+			}		
 		}
 	}
 	&__item {
@@ -1284,11 +1381,20 @@
 			width: vw(96);
 			height: vw(96);
 			margin-right: vw(16);
+			@include max(md) {
+				width: vw2(40);
+				height: vw2(40);
+				margin-right: vw2(16)
+			}	
 		}
 		.surfaces__item--text {
 			color: #000;
 			width: 100%;
-			max-width: vw(270)
+			max-width: vw(270);
+			@include max(md) {
+				width: 100%;
+				max-width: 100%;
+			}		
 		}
 	}
 	&-process {
@@ -1350,8 +1456,9 @@
 		flex-flow: column nowrap;
 		margin-bottom: vw(54);
 		max-width: vw(745);
-
-
+		@include max(md) {
+			max-width: 100%;
+		}		
 	}
 	&__pictures {
 		position: relative;
@@ -1361,6 +1468,10 @@
 		align-items: flex-start;
 		width: calc(100% + vw(32));
 		margin-left: vw(-32);
+		@include max(md) {
+			width: 100%;
+			margin-left: 0;
+		}	
 	}
 	&__picture-item {
 		position: relative;
@@ -1372,6 +1483,12 @@
 		max-width: calc(50% - vw(32));
 		margin-left: vw(32);
 		margin-bottom: vw(61);
+		@include max(md) {
+			flex: 0 1 100%;
+			max-width: 100%;
+			margin-left: vw(0);
+			margin-bottom: vw2(20);
+		}	
 		&--picture{
 			position: relative;
 			display: block;
@@ -1403,11 +1520,17 @@
 				left: vw(15);
 				color: #fff;
 				max-width: vw(202);
+				@include max(md) {
+					max-width: 100%;
+				}	
 			}
 		}
 		&--text {
 			width: 100%;
 			max-width: vw(486);
+			@include max(md) {
+				max-width: 100%;
+			}	
 		}	
 	}
 
