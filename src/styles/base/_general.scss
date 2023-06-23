@@ -192,10 +192,9 @@ img{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	max-width: 188px;
+	height: vw(56);
+	width: vw(188);
 	cursor: pointer;
-	height: 56px;
 	border: 0;
 	border-radius: 50%;
 	background-color: transparent;
@@ -204,8 +203,8 @@ img{
 	border-radius: 8px;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 17px;
+	font-size: vw(14);
+	line-height: vw(17);
 	color: #535353;
 	&:hover {
 		transition: 0.3s ease;
