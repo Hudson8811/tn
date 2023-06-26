@@ -6141,7 +6141,7 @@ summary {
 @media only screen and (max-width: 699px) {
   .section3 {
     flex-flow: column-reverse nowrap;
-    padding-bottom: 32.8125vw;
+    padding-top: 32.8125vw;
     position: relative;
     min-height: auto;
     height: auto;
@@ -6157,6 +6157,11 @@ summary {
   justify-content: flex-end;
   width: 50%;
   height: 100%;
+}
+@media only screen and (max-width: 699px) {
+  .section3__col--one {
+    padding-top: 12.5vw;
+  }
 }
 @media only screen and (max-width: 699px) {
   .section3__col {
@@ -6175,7 +6180,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .section3__title {
     width: 225vw;
-    top: 27.5vw;
+    top: 0vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -6205,8 +6210,8 @@ summary {
     width: 86.875vw;
     position: absolute;
     left: 6.25vw;
-    top: auto;
-    bottom: 5.625vw;
+    top: 6.25vw;
+    bottom: auto;
     font-size: 3.75vw;
     line-height: 4.6875vw;
   }
@@ -6222,6 +6227,7 @@ summary {
 @media only screen and (max-width: 699px) {
   .material {
     max-height: 39.0625vw;
+    margin-top: -12.5vw;
   }
 }
 .material-slide {
@@ -6232,9 +6238,9 @@ summary {
   line-height: 12.2491349481vw;
   padding-left: 2.4221453287vw;
   letter-spacing: -0.055em;
-  transition: all 1s;
   color: #fff;
   background-color: #fff;
+  opacity: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(360deg, #fff 16.33%, #fff 100%);
@@ -6244,6 +6250,11 @@ summary {
     padding-left: 6.25vw;
   }
 }
+@media only screen and (max-width: 699px) {
+  .material-slide {
+    opacity: 0;
+  }
+}
 .material-slide.swiper-slide-next {
   transition: all 1s;
   color: #fff;
@@ -6251,6 +6262,15 @@ summary {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(360deg, #252525 16.33%, rgba(37, 37, 37, 0.75) 100%);
+  opacity: 1;
+}
+.material-slide.swiper-slide-active {
+  color: #fff;
+  background-color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(360deg, #fff 16.33%, #fff 100%);
+  opacity: 1;
 }
 .material-slide.swiper-slide-prev {
   transition: all 1s;
@@ -6258,6 +6278,12 @@ summary {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(180deg, #252525 16.33%, rgba(37, 37, 37, 0.75) 100%);
+  opacity: 1;
+}
+@media only screen and (max-width: 699px) {
+  .material-slide.swiper-slide-prev {
+    opacity: 0;
+  }
 }
 .material--button {
   background: rgb(255, 255, 255);
@@ -6280,7 +6306,7 @@ summary {
 }
 @media only screen and (max-width: 699px) {
   .material-foto {
-    height: 100vh;
+    height: 80vh;
   }
 }
 .material-foto__slide {
@@ -6886,6 +6912,7 @@ summary {
     padding-left: 6.25vw;
     padding-right: 6.25vw;
     padding-bottom: 7.1875vw;
+    overflow: hidden;
   }
 }
 .section7__picture {
@@ -6979,10 +7006,22 @@ summary {
   }
 }
 .section7__button {
+  background: #fff;
+}
+.section7__button--wrap {
   position: absolute;
   top: 4.9134948097vw;
   right: 4.0138408304vw;
-  background: #fff;
+  width: auto;
+}
+@media only screen and (max-width: 699px) {
+  .section7__button--wrap {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 699px) {
   .section7__button {

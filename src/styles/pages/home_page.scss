@@ -240,7 +240,7 @@
 	}
 	@include max(sm) {
 		flex-flow: column-reverse nowrap;
-		padding-bottom: vw2(105);
+		padding-top: vw2(105);
 		position: relative;
 		min-height: auto;
 		height: auto;
@@ -256,6 +256,9 @@
 		width: 50%;
 		height: 100%;
 		&--one {
+			@include max(sm) {
+				padding-top: vw2(40);
+			}
 		}
 		@include max(sm) {
 			width: 100%;
@@ -271,9 +274,8 @@
 		color: #fff;
 
 		@include max(md) {
-
 			width: vw2(720);
-			top: vw2(88);
+			top: vw2(0);
 		}
 
 		@include max(sm) {
@@ -301,8 +303,8 @@
 			width: vw2(278);
 			position: absolute;
 			left: vw2(20);
-			top: auto;
-			bottom: vw2(18);
+			top: vw2(20);
+			bottom: auto;
 			font-size: vw2(12);
 			line-height: vw2(15);
 		}
@@ -318,6 +320,7 @@
 	max-height: vw(522);
 	@include max(sm) {
 		max-height: vw2(125);
+		margin-top: vw2(-40);
 	}
 	&-slide {
 		font-family: 'Inter';
@@ -327,15 +330,18 @@
 		line-height: vw(177);
 		padding-left: vw(35);
 		letter-spacing: -0.055em;
-		transition: all 1s;
+		// transition: all 0.1s;
 		color: #fff;
 		background-color: #fff;
+		opacity: 0;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-image: linear-gradient(360deg, #fff 16.33%, #fff 100%);
-	
 		@include max(md) {
 			padding-left: vw2(20);
+		}
+		@include max(sm) {
+			opacity: 0;
 		}
 
 		&.swiper-slide-next	 {
@@ -345,7 +351,15 @@
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			background-image: linear-gradient(360deg, #252525 16.33%, rgba(37, 37, 37, 0.75) 100%);
-		
+			opacity: 1;
+		}
+		&.swiper-slide-active {
+			color: #fff;
+			background-color: #fff;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(360deg, #fff 16.33%, #fff 100%);
+			opacity: 1;
 		}
 		&.swiper-slide-prev	 {
 			transition: all 1s;
@@ -353,7 +367,10 @@
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			background-image: linear-gradient(180deg, #252525 16.33%, rgba(37, 37, 37, 0.75) 100%);
-		
+			opacity: 1;
+			@include max(sm) {
+				opacity: 0;
+			}
 		}
 	}
 	&--button {
@@ -377,7 +394,7 @@
 	width: 100%;
 	height: 100vh;
 	@include max(sm) {
-		height: 100vh;
+		height: 80vh;
 	}
 	&__slide {
 		font-family: 'Inter';
@@ -930,6 +947,7 @@
 		padding-left: vw2(20);
 		padding-right: vw2(20);
 		padding-bottom: vw2(23);
+		overflow: hidden;
 	}
 	&__picture {
 		position: absolute;
@@ -1010,10 +1028,20 @@
 		}
 	}
 	&__button {
-		position: absolute;
-		top: vw(71);
-		right: vw(58);
 		background: #fff;
+		&--wrap {
+			position: absolute;
+			top: vw(71);
+			right: vw(58);
+			width: auto;
+			@include max(sm) {
+				position: relative;
+				top: auto;
+				right: auto;
+				width: 100%;
+				max-width: 100%;
+			}	
+		}
 		@include max(sm) {
 			position: relative;
 			top: auto;
