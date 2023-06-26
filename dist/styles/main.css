@@ -6901,7 +6901,7 @@ summary {
   transition: all 2s;
 }
 .section7__picture.active {
-  transition: all 2s;
+  transition: all 3s;
   bottom: 0%;
 }
 @media only screen and (max-width: 699px) {
