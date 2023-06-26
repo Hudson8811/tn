@@ -69,12 +69,17 @@
         margin-top: vw2(23);
         height: auto;
       }
-      img {
+      img, svg {
         position: relative;
         width: 100%;
         height: 100%;
         object-fit: contain;
         object-position: left center;
+        .word {
+          path {
+            fill: #fff;
+          }
+        }
       }
     }
   }

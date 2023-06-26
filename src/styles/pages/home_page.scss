@@ -201,7 +201,7 @@
 			transition: all 2s;
 		}
 		@include max(sm) {
-			bottom: vw2(26);
+			bottom: -150%;
 		}
 
 
@@ -794,6 +794,9 @@
 			transform: translateY(0%);
 			transition: all 2s;
 			transition-delay: 0.5s;
+			@include max(md) {
+				transition-delay: 0.1s;
+			}
 		}
 	}
 	&__video {

@@ -21,7 +21,7 @@ var material = new Swiper(".js--material", {
     speed: 300,
 });
 var materialFoto = new Swiper(".js--material-foto", {
-    direction: "vertical",
+    direction: 'horizontal',
     slidesPerView: 1,
     spaceBetween: 0,
     loop: false,
@@ -32,6 +32,12 @@ var materialFoto = new Swiper(".js--material-foto", {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
     },
+    breakpoints: {
+        // when window width is >= 480px
+        700: {
+            direction: "vertical", 
+        },
+    }
 });
 materialFoto.controller.control = material;
 material.controller.control = materialFoto;
@@ -508,15 +514,47 @@ function initScrollAnimationTablet(){
 
 }
 function initScrollAnimationMobile(){
-    // gsap.to(".fullPageOverlay", {
-	// 	duration: 1,
-	// 	autoAlpha: 0,
-	// 	ease: "none",
-	// 	onComplete: function () {
-	// 			$('.fullPageOverlay').removeClass('active');
-	// 			$('body').addClass('active');
-	// 	}
-	// });
+    const section2 = document.getElementById('product');
+    if( section2 !== null ) {
+        document.addEventListener('scroll', function() {
+            const posTop = section2.getBoundingClientRect().top;
+            
+            // Блок достиг верхней границы экрана (или выше)
+          //   elem.classList.toggle('visible', posTop <= 0);
+            
+            // Блок только появляется снизу (или выше)
+              if(posTop < window.innerHeight) {
+                  let balon = document.querySelector(".section2__title--mob")
+                  balon.classList.add("active")
+                  
+              }
+          //   elem.classList.toggle('visible', posTop < window.innerHeight);
+              
+            // Блок целиком находится в видимой зоне
+          //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+          });
+    }
+
+    const section5 = document.getElementById('section5');
+    if( section5 !== null ) {
+        document.addEventListener('scroll', function() {
+            const posTop = section5.getBoundingClientRect().top;
+            
+            // Блок достиг верхней границы экрана (или выше)
+          //   elem.classList.toggle('visible', posTop <= 0);
+            
+            // Блок только появляется снизу (или выше)
+              if(posTop < window.innerHeight) {
+                  let balon = document.querySelector(".section5__title--mob")
+                  balon.classList.add("active")
+                  
+              }
+          //   elem.classList.toggle('visible', posTop < window.innerHeight);
+              
+            // Блок целиком находится в видимой зоне
+          //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+          });
+    }
 }
 
 
