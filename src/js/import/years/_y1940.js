@@ -135,13 +135,18 @@ if( section7 !== null ) {
         
         // Блок достиг верхней границы экрана (или выше)
       //   elem.classList.toggle('visible', posTop <= 0);
+        if(posTop <= 0) {
+            let balon = document.querySelector(".section7__picture")
+            balon.classList.add("active")
+            
+        }
         
         // Блок только появляется снизу (или выше)
-          if(posTop < window.innerHeight) {
-              let balon = document.querySelector(".section7__picture")
-              balon.classList.add("active")
+        //   if(posTop < window.innerHeight) {
+        //       let balon = document.querySelector(".section7__picture")
+        //       balon.classList.add("active")
               
-          }
+        //   }
       //   elem.classList.toggle('visible', posTop < window.innerHeight);
           
         // Блок целиком находится в видимой зоне

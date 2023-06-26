@@ -909,12 +909,16 @@ if (section7 !== null) {
   document.addEventListener('scroll', function () {
     var posTop = section7.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
     //   elem.classList.toggle('visible', posTop <= 0);
-    // Блок только появляется снизу (или выше)
 
-    if (posTop < window.innerHeight) {
+    if (posTop <= 0) {
       var balon = document.querySelector(".section7__picture");
       balon.classList.add("active");
-    } //   elem.classList.toggle('visible', posTop < window.innerHeight);
+    } // Блок только появляется снизу (или выше)
+    //   if(posTop < window.innerHeight) {
+    //       let balon = document.querySelector(".section7__picture")
+    //       balon.classList.add("active")
+    //   }
+    //   elem.classList.toggle('visible', posTop < window.innerHeight);
     // Блок целиком находится в видимой зоне
     //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
 
