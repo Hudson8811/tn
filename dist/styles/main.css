@@ -3259,10 +3259,6 @@ body:not(.active) {
   overflow: hidden !important;
 }
 
-*::-webkit-scrollbar {
-  display: none;
-}
-
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -5774,7 +5770,7 @@ summary {
 
 .nav-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   height: 62px;
@@ -5802,14 +5798,18 @@ summary {
   color: #ED1C24;
 }
 
-.nav-container .checkbox {
+.close {
   position: relative;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  top: 15px;
+  right: 6.25vw;
   display: block;
-  height: 32px;
-  width: 32px;
-  top: 20px;
-  left: 20px;
-  z-index: 5;
+  height: 42px;
+  width: 42px;
+  z-index: 10;
   opacity: 0;
   cursor: pointer;
 }
@@ -5949,15 +5949,21 @@ summary {
     width: 72.8125vw;
     left: 5.3125vw;
     bottom: 8.125vw;
+    color: #fff;
   }
 }
 @media only screen and (max-width: 699px) {
   .section1__title {
-    bottom: 17.5vw;
+    bottom: 46.875vw;
   }
 }
 .section1__title img {
   width: 100%;
+}
+@media only screen and (max-width: 1100px) {
+  .section1__title span {
+    opacity: 1;
+  }
 }
 .section1__house {
   width: 100vw;
@@ -5985,7 +5991,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .section1__house img, .section1__house picture {
-    object-position: center bottom;
+    object-position: 91% bottom;
   }
 }
 .section1__dates {
@@ -6083,8 +6089,13 @@ summary {
   .section2__title {
     width: 78.125vw;
     left: 5.3125vw;
-    bottom: 8.125vw;
+    bottom: -100%;
+    transition: all 2s;
   }
+}
+.section2__title.active {
+  bottom: 8.125vw;
+  transition: all 2s;
 }
 @media only screen and (max-width: 699px) {
   .section2__title {
@@ -6218,7 +6229,12 @@ summary {
   line-height: 12.2491349481vw;
   padding-left: 2.4221453287vw;
   letter-spacing: -0.055em;
-  color: #FFFFFF;
+  transition: all 1s;
+  color: #fff;
+  background-color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(360deg, #fff 16.33%, #fff 100%);
 }
 @media only screen and (max-width: 1100px) {
   .material-slide {
@@ -6226,12 +6242,15 @@ summary {
   }
 }
 .material-slide.swiper-slide-next {
+  transition: all 1s;
+  color: #fff;
   background-color: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(360deg, #252525 16.33%, rgba(37, 37, 37, 0.75) 100%);
 }
 .material-slide.swiper-slide-prev {
+  transition: all 1s;
   background-color: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6258,7 +6277,7 @@ summary {
 }
 @media only screen and (max-width: 699px) {
   .material-foto {
-    height: 63.75vw;
+    height: 100vh;
   }
 }
 .material-foto__slide {
@@ -6578,6 +6597,9 @@ summary {
 .color-list__item:nth-child(2) .color-list__item--color {
   background: #733C3F;
 }
+.color-list__item.active {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 .color-list__item:hover {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 9px;
@@ -6708,7 +6730,14 @@ summary {
     margin-top: 7.5vw;
     width: 100%;
     width: 78.125vw;
+    transition: all 2s;
+    transform: translateY(150%);
   }
+}
+.section5__title.active {
+  transform: translateY(0%);
+  transition: all 2s;
+  transition-delay: 0.5s;
 }
 .section5__video {
   position: relative;
@@ -6860,6 +6889,17 @@ summary {
   right: 0;
   bottom: 0;
   z-index: 30;
+  bottom: -100%;
+  transition: all 2s;
+}
+.section7__picture.active {
+  transition: all 2s;
+  bottom: 0%;
+}
+@media only screen and (max-width: 699px) {
+  .section7__picture.active {
+    bottom: 26.25vw;
+  }
 }
 @media only screen and (max-width: 1100px) {
   .section7__picture {
@@ -6868,7 +6908,7 @@ summary {
 }
 @media only screen and (max-width: 699px) {
   .section7__picture {
-    bottom: 26.25vw;
+    bottom: -100%;
     z-index: 0;
     width: calc(100% - 12.5vw);
     margin-left: 6.25vw;
@@ -7009,7 +7049,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .accordion__intro p {
-    font-size: 3.75vw;
+    font-size: 5vw;
     line-height: 4.6875vw;
     max-width: 28.4375vw;
   }
@@ -7488,6 +7528,7 @@ summary {
   width: 100%;
   overflow: hidden;
   margin-bottom: 1.5916955017vw;
+  border-radius: 1.2456747405vw;
 }
 .result__picture-item--picture::before {
   content: "";

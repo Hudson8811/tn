@@ -25,7 +25,7 @@ block content
 			.section1__scroll
 				span Scroll
 
-		.section2
+		.section2#product
 			video.video.section2__video(loop="loop" autoplay="" muted="")
 				source(src="video/video--1.mp4", type="video/mp4")
 			.section2__title.blockTitle.blockTitle--desc
@@ -35,9 +35,9 @@ block content
 				span Полное соответствие RAL.
 				br
 				span Высокая укрывистость. 
-			.section2__title.blockTitle.blockTitle--mob
+			.section2__title.section2__title--mob.blockTitle.blockTitle--mob
 				!="Равномерное и долговечное покрытие. <br><span>Насыщенность цвета. Полное соответствие RAL. Высокая укрывистость.</span>"
-		.section3
+		.section3#material
 			.section3__subtitle.subBlockTitle
 				!="Для окраски различных поверхностей из:"
 			.section3__col.section3__col--one
@@ -73,7 +73,7 @@ block content
 								img(src="img/main/material-foto--5.png" alt="")
 					.swiper-button-next.material-foto--button
 					.swiper-button-prev.material-foto--button
-		.section4
+		.section4#color
 			.section4__col
 				.section4__title.blockTitle
 					!="Придайте предметам  <span>глубокий и насыщенный цвет.</span>"
@@ -140,18 +140,24 @@ block content
 							.color-list__item--color
 							.color-list__item--title Зеленый MOX
 							.color-list__item--rall RAL 6005
-		.section5
+		.section5#section5
 			.section5__col
 				.section5__video 
 					video.video(loop="loop" autoplay="" muted="")
 						source(src="video/video--1.mp4", type="video/mp4")
 				.button.section5__button Купить онлайн
 			.section5__col
-				.section5__title.blockTitle
-					!="Реальный выкрас на крышке баллона. <span>Гарантия цвета. Уверенность в результате.</span>"
+				.section5__title.section5__title--mob.blockTitle.blockTitle--mob
+					!="Реальный выкрас на крышке баллона. <br><span>Гарантия цвета. Уверенность в результате.</span>"
+				.section5__title.blockTitle.blockTitle--desc
+					span Реальный выкрас на крышке баллона.
+					br
+					span Гарантия цвета.
+					br
+					span Уверенность в результате.
 	
 	.home-page
-		.section6
+		.section6#surfaces
 			.section6__title.blockTitle
 					!="Рекомендации <span>по применению</span>"
 			.accordions
@@ -168,45 +174,46 @@ block content
 								.surfaces__title Рекомендации по подготовке различных поверхностей
 								.surfaces__item
 									.surfaces__item--title.blockText Металл.
-									.surfaces__item--text.blockText Если присутствуют следы ржавчины, отшлифуйте и покройте поверхность антикоррозийным составом, чтобы избежать дальнейшей коррозии.
+									.surfaces__item--text.blockText  Если присутствуют следы ржавчины, отшлифуйте и покройте поверхность антикоррозийным составом, чтобы избежать дальнейшей коррозии.
 								.surfaces__item
 									.surfaces__item--title.blockText Дерево.
-									.surfaces__item--text.blockText Дерево пористый материал, а значит часть краски впитается. Для яркого цвета и наилучшего качества покрытия, предварительно покройте дерево грунтом. 3 слоя – текстура дерева останется, больше слоев – можно перекрыть. Либо дополнительно загрунтовать. Если нужно сохранить текстуру древесины нанесите краску без предварительного грунтования. Отшлифуйте, если необходимо получить более гладкую поверхность.
+									.surfaces__item--text.blockText  Дерево пористый материал, а значит часть краски впитается. Для яркого цвета и наилучшего качества покрытия, предварительно покройте дерево грунтом. Для полного перекрытия текстуры дерева потребуется нанести более 3 слоев. Предварительно отшлифуйте, если необходимо получить более гладкую поверхность.
 								.surfaces__item
 									.surfaces__item--picture-wrap 
 										.surfaces__item--picture 
 											picture
-													source(srcset="img/main/surfaces--4.png" media="(max-width: 699px)")
-													img(src="img/main/surfaces--4.png" alt="")
+													source(srcset="img/main/surfaces--4.jpg" media="(max-width: 699px)")
+													img(src="img/main/surfaces--4.jpg" alt="")
 										.surfaces__item--picture 
 											picture
-													source(srcset="img/main/surfaces--5.png" media="(max-width: 699px)")
-													img(src="img/main/surfaces--5.png" alt="")
+													source(srcset="img/main/surfaces--5.jpg" media="(max-width: 699px)")
+													img(src="img/main/surfaces--5.jpg" alt="")
 								.surfaces__item
 									.surfaces__item--title.blockText Пластик.
-									.surfaces__item--text.blockText Для декоративных работ нанесите краску без предварительного грунтования. Для увеличения износостойкости покрытия используйте грунт для пластиков в качестве первого слоя. 
+									.surfaces__item--text.blockText Для декоративных работ нанесите краску без предварительного грунтования. Для увеличения износостойкости покрытия используйте грунт для пластиков в качестве первого слоя.
 								.surfaces__item
 									.surfaces__item--title.blockText Камень, бетон, картон.
-									.surfaces__item--text.blockText Имейте ввиду, что данные материалы пористые, а значит часть краски впитается. Для достижения более яркого цвета, количество слоев краски может быть увеличено до 4-х. Бетон можно предварительно отшлифовать для получения более гладкой поверхности.
+									.surfaces__item--text.blockText Для декоративных работ нанесите краску без предварительного грунтования. Для увеличения износостойкости покрытия используйте грунт для пластиков в качестве первого слоя. Камень, бетон, картон. Имейте ввиду, что данные материалы пористые, а значит часть краски впитается. Для достижения более яркого цвета, количество слоев краски может быть увеличено до 4-х. Бетон можно предварительно отшлифовать для получения более гладкой поверхности.
+
 							.surfaces__col
 								.surfaces-process
 									.surfaces-process__item
 										.surfaces-process__item--picture
 											picture
-												source(srcset="img/main/surfaces--1.png" media="(max-width: 699px)")
-												img(src="img/main/surfaces--1.png" alt="")
-										.surfaces-process__item--text.blockText Используйте во время работы средства защиты: перчатки и маску, чтобы не навредить здоровью.
+												source(srcset="img/main/surfaces--1.jpg" media="(max-width: 699px)")
+												img(src="img/main/surfaces--1.jpg" alt="")
+										.surfaces-process__item--text.blockText Используйте во время работы средства защиты: перчатки и маску, чтобы не навредить здоровью. Замаскируйте малярной лентой или другими маскирующими материалами зону, которая не подлежит окраске. Очистите окрашиваемую поверхность от пыли, грязи и жиров. При окраске непористых материалов предварительно обезжирьте поверхность.
 									.surfaces-process__item
 										.surfaces-process__item--picture
 											picture
-												source(srcset="img/main/surfaces--2.png" media="(max-width: 699px)")
-												img(src="img/main/surfaces--2.png" alt="")
+												source(srcset="img/main/surfaces--2.jpg" media="(max-width: 699px)")
+												img(src="img/main/surfaces--2.jpg" alt="")
 										.surfaces-process__item--text.blockText Замаскируйте малярной лентой или другими маскирующими материалами зону, которая не подлежит окраске.
 									.surfaces-process__item
 										.surfaces-process__item--picture
 											picture
-												source(srcset="img/main/surfaces--3.png" media="(max-width: 699px)")
-												img(src="img/main/surfaces--3.png" alt="")
+												source(srcset="img/main/surfaces--3.jpg" media="(max-width: 699px)")
+												img(src="img/main/surfaces--3.jpg" alt="")
 										.surfaces-process__item--text.blockText Используйте во время работы средства защиты: перчатки и маску, чтобы не навредить здоровью.
 				
 				.accordion
@@ -239,7 +246,7 @@ block content
 								.prep__item
 									.surfaces__item--text.blockText Температурный диапазон применения краски от плюс 10 до плюс 30⁰С окружающей среды и баллона. Для создания покрытия высокого качества рекомендуется, чтобы температура баллона и основания были одинаковыми. Слишком низкая температура баллона может стать причиной его неработоспособности. Причиной неработающего баллона также может быть засохшая краска в клапане или в сопле. Во избежание этой проблемы после нанесения нужно перевернуть баллон и выпустить остатки материала до момента выхода чистого газа.
 								.prep__item.prep__item-end
-									img(src="img/main/prep-1.png" alt="")
+									img(src="img/main/prep-1.jpg" alt="")
 									.surfaces__item--text.blockText Выпуск остатков краски из баллона по окончанию работы
 				
 				.accordion
@@ -257,21 +264,21 @@ block content
 								.result__picture-item
 									.result__picture-item--picture 
 										picture
-											source(srcset="img/main/result-1.png" media="(max-width: 699px)")
-											img(src="img/main/result-1.png" alt="")
+											source(srcset="img/main/result-1.jpg" media="(max-width: 699px)")
+											img(src="img/main/result-1.jpg" alt="")
 									.result__picture-item--text.blockText Расстояние от объекта
 								.result__picture-item
 									.result__picture-item--picture 
 										picture
-											source(srcset="img/main/result-2.png" media="(max-width: 699px)")
-											img(src="img/main/result-2.png" alt="")
+											source(srcset="img/main/result-2.jpg" media="(max-width: 699px)")
+											img(src="img/main/result-2.jpg" alt="")
 									.result__picture-item--text.blockText Перекрытие
 								.result__picture-item
 									.result__picture-item--picture 
 										picture
-												source(srcset="img/main/result-3.png" media="(max-width: 699px)")
-												img(src="img/main/result-3.png" alt="")
-									.result__picture-item--text.blockText Красить следует заходя за край окрашиваемой поверхности.
+												source(srcset="img/main/result-3.jpg" media="(max-width: 699px)")
+												img(src="img/main/result-3.jpg" alt="")
+									.result__picture-item--text.blockText Красить следует заходя за край окрашиваемой поверхности. 
 							.result__item
 								.result__item--text.blockText Если требуется прервать нанесение по середине, то отведите баллон за границы окрашиваемой области и после этого отпустите клапан. Начинайте красить с середины аналогично – нажмите на клапан за пределами окрашиваемой области и после переместите баллон. Тогда в этом месте не будет резкой границы, подтёков или непрокрашенных мест.
 							.result__pictures
@@ -288,7 +295,7 @@ block content
 											img(src="img/main/result-5.png" alt="")
 									.result__picture-item--text.blockText Окраска прервана неправильно
 							.result__item
-								.result__item--text.blockText При окраске поверх старого покрытия зачистите старую краску, отшлифуйте, обеспыльте и обезжирьте поверхность (для непористых материалов). В эмалях традиционно существуют более укрывистые цвета, так и менее укрывистые. Например, красные и синие цвета требуют большее количество слоёв для наилучшей укрываемости. Также во время окраски учтите цвет окрашиваемой поверхности. Например, чёрную деревянную коробку будет сложно покрасить в белый. Для этого потребуется предварительно нанести грунт.
+								.result__item--text.blockText При окраске поверх старого покрытия зачистите старую краску, отшлифуйте, обеспыльте и обезжирьте поверхность (для непористых материалов). В эмалях традиционно существуют более укрывистые цвета, так и менее укрывистые. Например, красные и синие цвета требуют большее количество слоёв для наилучшей укрываемости. Также во время окраски учтите цвет окрашиваемой поверхности. Например, чёрную деревянную коробку будет сложно покрасить в белый. Для этого потребуется предварительно нанести грунт.
 
 				.accordion
 					.accordion__intro
@@ -305,28 +312,28 @@ block content
 								.result__picture-item
 									.result__picture-item--picture 
 										picture
-											source(srcset="img/main/result-6.png" media="(max-width: 699px)")
-											img(src="img/main/result-6.png" alt="")
+											source(srcset="img/main/result-6.jpg" media="(max-width: 699px)")
+											img(src="img/main/result-6.jpg" alt="")
 									.result__picture-item--text.blockText Правильно нанесенная краска
 								.result__picture-item
 									.result__picture-item--picture 
 										picture
-											source(srcset="img/main/result-7.png" media="(max-width: 699px)")
-											img(src="img/main/result-7.png" alt="")
+											source(srcset="img/main/result-7.jpg" media="(max-width: 699px)")
+											img(src="img/main/result-7.jpg" alt="")
 									.result__picture-item--text.blockText Подрывы
 								.result__picture-item
 									.result__picture-item--picture 
 										picture
-												source(srcset="img/main/result-8.png" media="(max-width: 699px)")
-												img(src="img/main/result-8.png" alt="")
+												source(srcset="img/main/result-8.jpg" media="(max-width: 699px)")
+												img(src="img/main/result-8.jpg" alt="")
 									.result__picture-item--text.blockText Вздутия
 								.result__picture-item
 									.result__picture-item--picture 
 										picture
-												source(srcset="img/main/result-9.png" media="(max-width: 699px)")
-												img(src="img/main/result-9.png" alt="")
+												source(srcset="img/main/result-9.jpg" media="(max-width: 699px)")
+												img(src="img/main/result-9.jpg" alt="")
 									.result__picture-item--text.blockText Кратеры			
-		.section7
+		.section7#section7
 			.section7__title.blockTitle
 					!="Покрась <span><br>уже сейчас</span>"
 			.section7__picture 

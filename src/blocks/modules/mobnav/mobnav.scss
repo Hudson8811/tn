@@ -21,7 +21,7 @@
 
 .nav-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   height: 62px;
@@ -50,15 +50,18 @@
 }
 
 
-
-.nav-container .checkbox {
+.close {
   position: relative;
+
+}
+.nav-container .checkbox {
+  position: absolute;
+  top: 15px;
+  right: 6.25vw;
   display: block;
-  height: 32px;
-  width: 32px;
-  top: 20px;
-  left: 20px;
-  z-index: 5;
+  height: 42px;
+  width: 42px;
+  z-index: 10;
   opacity: 0;
   cursor: pointer;
 }

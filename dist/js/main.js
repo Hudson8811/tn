@@ -809,13 +809,15 @@ var material = new swiper__WEBPACK_IMPORTED_MODULE_1__.Swiper(".js--material", {
   centeredSlides: true,
   loop: false,
   pagination: true,
-  autoHeight: true
+  autoHeight: true,
+  speed: 300
 });
 var materialFoto = new swiper__WEBPACK_IMPORTED_MODULE_1__.Swiper(".js--material-foto", {
   direction: "vertical",
   slidesPerView: 1,
   spaceBetween: 0,
   loop: false,
+  speed: 800,
   // mousewheel: true,
   pagination: true,
   navigation: {
@@ -840,6 +842,7 @@ if (document.querySelector('.js--color-slider')) {
     });
     wrap.find('.color-list__item').on('click', function () {
       var filter = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-filter');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".color-list__item").removeClass("active");
       var selectedColor = {
         6005: "#195147",
         3005: "#733C3F"
@@ -856,11 +859,11 @@ if (document.querySelector('.js--color-slider')) {
         wrap.find('.swiper-slide').css('display', '');
       } else {
         wrap.find('.swiper-slide').css('display', 'none');
-        wrap.find('.swiper-slide[data-filter="' + filter + '"').css('display', '');
-      } // wrap.find('.js-swiper-filter').removeClass( 'news__categories-item--active' );
-      // $( this ).addClass('news__categories-item--active' );
+        wrap.find('.swiper-slide[data-filter="' + filter + '"').css('display', '').addClass("active");
+      } // $.not(this).removeClass('news__categories-item--active');
 
 
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
       swiperNews.updateSize();
       swiperNews.updateSlides();
       swiperNews.updateProgress();
@@ -892,7 +895,25 @@ if (document.querySelector('.js--color-slider')) {
         }
     });*/
   });
-} // accordions
+}
+
+var section7 = document.getElementById('section7');
+
+if (section7 !== null) {
+  document.addEventListener('scroll', function () {
+    var posTop = section7.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
+    //   elem.classList.toggle('visible', posTop <= 0);
+    // Блок только появляется снизу (или выше)
+
+    if (posTop < window.innerHeight) {
+      var balon = document.querySelector(".section7__picture");
+      balon.classList.add("active");
+    } //   elem.classList.toggle('visible', posTop < window.innerHeight);
+    // Блок целиком находится в видимой зоне
+    //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+
+  });
+} // accordions section6
 
 
 var accordions = document.querySelectorAll(".accordion");
@@ -1037,6 +1058,7 @@ function initScrollAnimationDesktop() {
     duration: 2,
     ease: "slow(0.7, 0.7, false)"
   }, ">");
+  tl1.addLabel('1941', "+=1.1");
   tl1.fromTo(".section2", {
     y: '100%'
   }, {
@@ -1093,6 +1115,7 @@ function initScrollAnimationDesktop() {
     duration: 0.15,
     ease: "none"
   }, ">");
+  tl1.addLabel('1942', "+=1.4");
   tl1.fromTo(".section3", {
     y: '100%'
   }, {
@@ -1107,6 +1130,7 @@ function initScrollAnimationDesktop() {
     duration: 2,
     ease: "none"
   }, ">+=0.2");
+  tl1.addLabel('1943', "-=0.8");
   tl1.fromTo(".section4", {
     y: '100%'
   }, {
@@ -1125,9 +1149,38 @@ function initScrollAnimationDesktop() {
     y: '100vh'
   }, {
     y: '-115%',
-    duration: 2,
+    duration: 3,
     ease: "none"
-  }, ">+=0.2"); // tl1.fromTo(".section6", {
+  }, ">+=0.2");
+  tl1.fromTo(".section5__title span:nth-child(1)", {
+    opacity: 1
+  }, {
+    opacity: 0.25,
+    duration: 1,
+    ease: "none"
+  }, "<+=0.6");
+  tl1.fromTo(".section5__title span:nth-child(3)", {
+    opacity: 0.25
+  }, {
+    opacity: 1,
+    duration: 0.15,
+    ease: "none"
+  }, ">-=0.6");
+  tl1.fromTo(".section5__title span:nth-child(3)", {
+    opacity: 1
+  }, {
+    opacity: 0.25,
+    duration: 0.25,
+    ease: "none"
+  }, ">+=0.5");
+  tl1.fromTo(".section5__title span:nth-child(5)", {
+    opacity: 0.25
+  }, {
+    opacity: 1,
+    duration: 0.15,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1944', "+=0.8"); // tl1.fromTo(".section6", {
   //     y: '100%',
   // }, {
   //     y: '0%',
@@ -1165,15 +1218,42 @@ function initScrollAnimationDesktop() {
   });
 }
 
-function initScrollAnimationTablet() {// gsap.to(".fullPageOverlay", {
-  // 	duration: 1,
-  // 	autoAlpha: 0,
-  // 	ease: "none",
-  // 	onComplete: function () {
-  // 			$('.fullPageOverlay').removeClass('active');
-  // 			$('body').addClass('active');
-  // 	}
-  // });
+function initScrollAnimationTablet() {
+  var section2 = document.getElementById('product');
+
+  if (section2 !== null) {
+    document.addEventListener('scroll', function () {
+      var posTop = section2.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
+      //   elem.classList.toggle('visible', posTop <= 0);
+      // Блок только появляется снизу (или выше)
+
+      if (posTop < window.innerHeight) {
+        var balon = document.querySelector(".section2__title--mob");
+        balon.classList.add("active");
+      } //   elem.classList.toggle('visible', posTop < window.innerHeight);
+      // Блок целиком находится в видимой зоне
+      //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+
+    });
+  }
+
+  var section5 = document.getElementById('section5');
+
+  if (section5 !== null) {
+    document.addEventListener('scroll', function () {
+      var posTop = section5.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
+      //   elem.classList.toggle('visible', posTop <= 0);
+      // Блок только появляется снизу (или выше)
+
+      if (posTop < window.innerHeight) {
+        var balon = document.querySelector(".section5__title--mob");
+        balon.classList.add("active");
+      } //   elem.classList.toggle('visible', posTop < window.innerHeight);
+      // Блок целиком находится в видимой зоне
+      //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+
+    });
+  }
 }
 
 function initScrollAnimationMobile() {// gsap.to(".fullPageOverlay", {
@@ -1229,12 +1309,14 @@ function scrollToYear(year) {
   }
 }
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-dropdown a').on('click', function () {
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header__menu .header__menu-item a').on('click', function () {
   event.preventDefault();
   var link = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
 
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.sidebar__menu-item').hasClass('active')) {
+  if (link !== null) {
     var _yValue = getParameterFromString(link, "y");
+
+    console.log(_yValue);
 
     if (_yValue !== null) {
       scrollToYear(_yValue);
