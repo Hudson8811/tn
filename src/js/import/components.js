@@ -1,7 +1,7 @@
 import $ from "jquery";
-import Swiper from 'swiper/bundle';
-import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
-import gsap from "gsap";
+// import Swiper from 'swiper/bundle';
+// import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
+// import gsap from "gsap";
 
 // if ($('.scroll-page').length) {
 //     addEventListener('beforeunload', (event) => { });
@@ -19,9 +19,18 @@ $(window).on('load', function () {
     else {
         $('body').addClass('active');
     }
-
-
 });
+function setCssRootVars() {
+    let baseRatio = 2010 / 1080;
+    let windowWidth = $(window).innerWidth();
+    let windowHeight = $(window).innerHeight();
+    let windowRatio = windowWidth / windowHeight;
+    let newVW = 1;
+    if (windowRatio > baseRatio) newVW = 1 / (windowRatio / baseRatio);
+    $(':root').css('--vw', newVW + 'vw');
+
+}
+
 
 // $(document).ready(function () {
 //     if ($('.e-filter').length > 0) {
@@ -235,16 +244,7 @@ $(window).on('load', function () {
 // });
 
 
-function setCssRootVars() {
-    let baseRatio = 2010 / 1080;
-    let windowWidth = $(window).innerWidth();
-    let windowHeight = $(window).innerHeight();
-    let windowRatio = windowWidth / windowHeight;
-    let newVW = 1;
-    if (windowRatio > baseRatio) newVW = 1 / (windowRatio / baseRatio);
-    $(':root').css('--vw', newVW + 'vw');
 
-}
 
 
 

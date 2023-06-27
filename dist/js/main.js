@@ -11,12 +11,10 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
-/* harmony import */ var _fancyapps_ui_dist_fancybox_fancybox_esm_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fancyapps/ui/dist/fancybox/fancybox.esm.js */ "./node_modules/@fancyapps/ui/dist/fancybox/fancybox.esm.js");
-
-
-
- // if ($('.scroll-page').length) {
+ // import Swiper from 'swiper/bundle';
+// import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
+// import gsap from "gsap";
+// if ($('.scroll-page').length) {
 //     addEventListener('beforeunload', (event) => { });
 //     onbeforeunload = (event) => {
 //         window.scrollTo(0, 0);
@@ -31,7 +29,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
   } else {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
   }
-}); // $(document).ready(function () {
+});
+
+function setCssRootVars() {
+  var baseRatio = 2010 / 1080;
+  var windowWidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).innerWidth();
+  var windowHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).innerHeight();
+  var windowRatio = windowWidth / windowHeight;
+  var newVW = 1;
+  if (windowRatio > baseRatio) newVW = 1 / (windowRatio / baseRatio);
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(':root').css('--vw', newVW + 'vw');
+} // $(document).ready(function () {
 //     if ($('.e-filter').length > 0) {
 //         const eFilterSwiper = new Swiper('.e-filter .swiper', {
 //             loop: false,
@@ -209,16 +217,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
 //         console.log('Выбранное значение: ' + $(this).val());
 //     })
 // });
-
-function setCssRootVars() {
-  var baseRatio = 2010 / 1080;
-  var windowWidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).innerWidth();
-  var windowHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).innerHeight();
-  var windowRatio = windowWidth / windowHeight;
-  var newVW = 1;
-  if (windowRatio > baseRatio) newVW = 1 / (windowRatio / baseRatio);
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(':root').css('--vw', newVW + 'vw');
-} // function disableScroll() {
+// function disableScroll() {
 //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 //     let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 //     window.onscroll = function () {
