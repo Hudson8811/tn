@@ -163,10 +163,10 @@ if (document.querySelector('.js--color-slider')) {
 		};
 	});
 
-    $('.accordion').click(function(){
-        console.log ()
-        $('html, body').stop().animate({ scrollTop:$('.accordions').offset().top}, 1000);
-      });
+    // $('.accordion').click(function(){
+    //     console.log ()
+    //     $('html, body').stop().animate({ scrollTop:$('.accordions').offset().top}, 1000);
+    //   });
 // accordions
 
 
