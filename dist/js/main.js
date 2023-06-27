@@ -863,12 +863,12 @@ if (document.querySelector('.js--color-slider')) {
 
       if (filter === 'all') {
         wrap.find('.swiper-slide').css('display', '');
-        wrap.find('.color-list__selected--element').css('display', '');
+        wrap.find('.color-list__selected__element').css('display', '');
       } else {
         wrap.find('.swiper-slide').css('display', 'none');
         wrap.find('.swiper-slide[data-filter="' + filter + '"').css('display', '').addClass("active");
-        wrap.find('.color-list__selected--element').css('display', 'none');
-        wrap.find('.color-list__selected--element[data-filter="' + filter + '"').css('display', '').addClass("active");
+        wrap.find('.color-list__selected__element').css('display', 'none');
+        wrap.find('.color-list__selected__element[data-filter="' + filter + '"').css('display', '').addClass("active");
       } // $.not(this).removeClass('news__categories-item--active');
 
 
@@ -903,28 +903,6 @@ if (document.querySelector('.js--color-slider')) {
             wrap.find('.news__top-mobile .swiper-btn--next').removeClass('swiper-button-disabled');
         }
     });*/
-  });
-}
-
-var section7 = document.getElementById('section7');
-
-if (section7 !== null) {
-  document.addEventListener('scroll', function () {
-    var posTop = section7.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
-    //   elem.classList.toggle('visible', posTop <= 0);
-
-    if (posTop <= 0) {
-      var balon = document.querySelector(".section7__picture");
-      balon.classList.add("active");
-    } // Блок только появляется снизу (или выше)
-    //   if(posTop < window.innerHeight) {
-    //       let balon = document.querySelector(".section7__picture")
-    //       balon.classList.add("active")
-    //   }
-    //   elem.classList.toggle('visible', posTop < window.innerHeight);
-    // Блок целиком находится в видимой зоне
-    //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
-
   });
 } // accordions section6
 
@@ -1229,6 +1207,27 @@ function initScrollAnimationDesktop() {
     //2.5
     animation: tl1
   });
+  var section7 = document.getElementById('section7');
+
+  if (section7 !== null) {
+    document.addEventListener('scroll', function () {
+      var posTop = section7.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
+      //   elem.classList.toggle('visible', posTop <= 0);
+
+      if (posTop <= 0) {
+        var balon = document.querySelector(".section7__picture");
+        balon.classList.add("active");
+      } // Блок только появляется снизу (или выше)
+      //   if(posTop < window.innerHeight) {
+      //       let balon = document.querySelector(".section7__picture")
+      //       balon.classList.add("active")
+      //   }
+      //   elem.classList.toggle('visible', posTop < window.innerHeight);
+      // Блок целиком находится в видимой зоне
+      //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+
+    });
+  }
 }
 
 function initScrollAnimationTablet() {
@@ -1267,6 +1266,28 @@ function initScrollAnimationTablet() {
 
     });
   }
+
+  var section7 = document.getElementById('section7');
+
+  if (section7 !== null) {
+    document.addEventListener('scroll', function () {
+      var posTop = section7.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
+      //   elem.classList.toggle('visible', posTop <= 0);
+
+      if (posTop <= 0) {
+        var balon = document.querySelector(".section7__picture");
+        balon.classList.add("active");
+      } // Блок только появляется снизу (или выше)
+      //   if(posTop < window.innerHeight) {
+      //       let balon = document.querySelector(".section7__picture")
+      //       balon.classList.add("active")
+      //   }
+      //   elem.classList.toggle('visible', posTop < window.innerHeight);
+      // Блок целиком находится в видимой зоне
+      //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+
+    });
+  }
 }
 
 function initScrollAnimationMobile() {
@@ -1299,6 +1320,30 @@ function initScrollAnimationMobile() {
       if (posTop < window.innerHeight) {
         var balon = document.querySelector(".section5__title--mob");
         balon.classList.add("active");
+      } //   elem.classList.toggle('visible', posTop < window.innerHeight);
+      // Блок целиком находится в видимой зоне
+      //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+
+    });
+  }
+
+  var section7 = document.getElementById('section7');
+
+  if (section7 !== null) {
+    document.addEventListener('scroll', function () {
+      var posTop = section7.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
+      //   elem.classList.toggle('visible', posTop <= 0);
+
+      if (posTop <= 0) {
+        var balon = document.querySelector(".section7__picture");
+        balon.classList.add("active");
+      } // Блок только появляется снизу (или выше)
+
+
+      if (posTop < window.innerHeight) {
+        var _balon = document.querySelector(".section7__picture");
+
+        _balon.classList.add("active");
       } //   elem.classList.toggle('visible', posTop < window.innerHeight);
       // Блок целиком находится в видимой зоне
       //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);

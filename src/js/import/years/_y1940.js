@@ -75,13 +75,13 @@ if (document.querySelector('.js--color-slider')) {
             });
             if(filter==='all'){
                 wrap.find('.swiper-slide').css('display', '');
-                wrap.find('.color-list__selected--element').css('display', '');
+                wrap.find('.color-list__selected__element').css('display', '');
             }
             else{
                 wrap.find('.swiper-slide').css('display', 'none');
                 wrap.find('.swiper-slide[data-filter="' + filter+'"').css('display', '').addClass("active");
-                wrap.find('.color-list__selected--element').css('display', 'none');
-                wrap.find('.color-list__selected--element[data-filter="' + filter+'"').css('display', '').addClass("active");
+                wrap.find('.color-list__selected__element').css('display', 'none');
+                wrap.find('.color-list__selected__element[data-filter="' + filter+'"').css('display', '').addClass("active");
                 
                 
             }
@@ -130,32 +130,7 @@ if (document.querySelector('.js--color-slider')) {
 
 
 
-const section7 = document.getElementById('section7');
 
-if( section7 !== null ) {
-    document.addEventListener('scroll', function() {
-        const posTop = section7.getBoundingClientRect().top;
-        
-        // Блок достиг верхней границы экрана (или выше)
-      //   elem.classList.toggle('visible', posTop <= 0);
-        if(posTop <= 0) {
-            let balon = document.querySelector(".section7__picture")
-            balon.classList.add("active")
-            
-        }
-        
-        // Блок только появляется снизу (или выше)
-        //   if(posTop < window.innerHeight) {
-        //       let balon = document.querySelector(".section7__picture")
-        //       balon.classList.add("active")
-              
-        //   }
-      //   elem.classList.toggle('visible', posTop < window.innerHeight);
-          
-        // Блок целиком находится в видимой зоне
-      //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
-      });
-}
 
 
 
@@ -474,6 +449,32 @@ function initScrollAnimationDesktop(){
         scrub: 0, //2.5
         animation: tl1,
     });
+    const section7 = document.getElementById('section7');
+
+    if( section7 !== null ) {
+    document.addEventListener('scroll', function() {
+        const posTop = section7.getBoundingClientRect().top;
+        
+        // Блок достиг верхней границы экрана (или выше)
+      //   elem.classList.toggle('visible', posTop <= 0);
+        if(posTop <= 0) {
+            let balon = document.querySelector(".section7__picture")
+            balon.classList.add("active")
+            
+        }
+        
+        // Блок только появляется снизу (или выше)
+        //   if(posTop < window.innerHeight) {
+        //       let balon = document.querySelector(".section7__picture")
+        //       balon.classList.add("active")
+              
+        //   }
+      //   elem.classList.toggle('visible', posTop < window.innerHeight);
+          
+        // Блок целиком находится в видимой зоне
+      //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+      });
+    }
 
 }
 
@@ -519,6 +520,32 @@ function initScrollAnimationTablet(){
           //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
           });
     }
+    const section7 = document.getElementById('section7');
+
+    if( section7 !== null ) {
+    document.addEventListener('scroll', function() {
+        const posTop = section7.getBoundingClientRect().top;
+        
+        // Блок достиг верхней границы экрана (или выше)
+      //   elem.classList.toggle('visible', posTop <= 0);
+        if(posTop <= 0) {
+            let balon = document.querySelector(".section7__picture")
+            balon.classList.add("active")
+            
+        }
+        
+        // Блок только появляется снизу (или выше)
+        //   if(posTop < window.innerHeight) {
+        //       let balon = document.querySelector(".section7__picture")
+        //       balon.classList.add("active")
+              
+        //   }
+      //   elem.classList.toggle('visible', posTop < window.innerHeight);
+          
+        // Блок целиком находится в видимой зоне
+      //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+      });
+    }
 
 }
 function initScrollAnimationMobile(){
@@ -562,6 +589,33 @@ function initScrollAnimationMobile(){
             // Блок целиком находится в видимой зоне
           //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
           });
+    }
+    const section7 = document.getElementById('section7');
+
+    if( section7 !== null ) {
+    document.addEventListener('scroll', function() {
+        const posTop = section7.getBoundingClientRect().top;
+        
+        // Блок достиг верхней границы экрана (или выше)
+      //   elem.classList.toggle('visible', posTop <= 0);
+        if(posTop <= 0) {
+            let balon = document.querySelector(".section7__picture")
+            balon.classList.add("active")
+            
+        }
+        
+        // Блок только появляется снизу (или выше)
+          if(posTop < window.innerHeight) {
+              let balon = document.querySelector(".section7__picture")
+              balon.classList.add("active")
+              
+          }
+      //   elem.classList.toggle('visible', posTop < window.innerHeight);
+          
+        // Блок целиком находится в видимой зоне
+      //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+        
+    });
     }
 }
 

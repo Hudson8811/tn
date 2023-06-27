@@ -592,6 +592,7 @@
 		flex-flow: row nowrap;
 		overflow-x: auto;
 		justify-content: flex-start;
+		padding-bottom: vw2(5)
 	}
 	&__wrap {
 		position: relative;
@@ -622,9 +623,12 @@
 		&__element {
 			position: relative;
 			display: none;
-			justify-content: center;
-			align-items: flex-start;
+			justify-content: flex-start;
+			align-items: center;
 			flex-flow: column nowrap;
+			@include max(md) {
+				flex-flow: row nowrap;
+			}
 			&.active {
 				display: flex;
 			}
