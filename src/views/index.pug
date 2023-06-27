@@ -101,14 +101,21 @@ block content
 								img(src="img/ral-6005/ral-6005-3.png" alt="")
 					.swiper-button-prev.color-slider--button 
 					.swiper-button-next.color-slider--button
-
 			.section4__col
 				.color-list__wrap
 					.color-list__selected
-						.color-list__selected--color
-						.color-list__item--wrap
-							.color-list__item--title Зеленый MOX 
-							.color-list__item--rall RAL 6005
+						.color-list__selected--element(data-filter="3005")
+							.color-list__selected--color
+								img(src="img/main/selected--color--2.jpg", alt="")
+							.color-list__item--wrap
+								.color-list__item--title Красное вино
+								.color-list__item--rall RAL 3005
+						.color-list__selected--element(data-filter="6005")
+							.color-list__selected--color
+								img(src="img/main/selected--color--3.jpg", alt="")
+							.color-list__item--wrap
+								.color-list__item--title Зеленый MOX 
+								.color-list__item--rall RAL 6005
 					.color-list
 						.color-list__item(data-filter="6005")
 							.color-list__item--color

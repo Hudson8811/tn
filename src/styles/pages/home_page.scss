@@ -475,6 +475,9 @@
 	justify-content: space-between;
 	align-items: stretch;
 	background: #F0F0F0;
+	&::-webkit-scrollbar {
+		display: block !important;
+	}
 	@include max(md) {
 		position: relative;
 		min-height: auto;
@@ -583,6 +586,7 @@
 	align-items: stretch;
 	width: 100%;
 	flex-flow: row wrap;
+
 	@include max(md) {
 		width: 100%;
 		flex-flow: row nowrap;
@@ -615,6 +619,16 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: vw(25);
+		&__element {
+			position: relative;
+			display: none;
+			justify-content: center;
+			align-items: flex-start;
+			flex-flow: column nowrap;
+			&.active {
+				display: flex;
+			}
+		}
 		@include max(md) {
 			flex-flow: row nowrap;
 		}
@@ -629,6 +643,13 @@
 			min-height: vw(108);
 			background: #17652E;
 			margin-bottom: vw(13);
+			img,svg {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				object-position: center center;
+			}
 			@include max(md) {
 				width: vw2(57);
 				min-width: vw2(57);

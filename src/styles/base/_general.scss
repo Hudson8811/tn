@@ -13,9 +13,9 @@ body{
 	}
 }
 
-*::-webkit-scrollbar {
-	display: none;
-}
+*:not(.color-list)::-webkit-scrollbar {
+ 	display: none;
+}	
 
 * {
 	-ms-overflow-style: none;

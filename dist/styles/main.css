@@ -3259,7 +3259,7 @@ body:not(.active) {
   overflow: hidden !important;
 }
 
-*::-webkit-scrollbar {
+*:not(.color-list)::-webkit-scrollbar {
   display: none;
 }
 
@@ -4162,7 +4162,7 @@ summary {
   display: flex;
   padding-top: 2.0069204152vw;
   margin-bottom: 2.0069204152vw;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid rgba(255, 255, 255, 0.2);
 }
 @media only screen and (max-width: 1100px) {
   .footer__row {
@@ -6418,6 +6418,9 @@ summary {
   align-items: stretch;
   background: #F0F0F0;
 }
+.section4::-webkit-scrollbar {
+  display: block !important;
+}
 @media only screen and (max-width: 1100px) {
   .section4 {
     position: relative;
@@ -6575,6 +6578,16 @@ summary {
   align-items: center;
   margin-bottom: 1.7301038062vw;
 }
+.color-list__selected__element {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+.color-list__selected__element.active {
+  display: flex;
+}
 @media only screen and (max-width: 1100px) {
   .color-list__selected {
     flex-flow: row nowrap;
@@ -6591,6 +6604,13 @@ summary {
   min-height: 7.4740484429vw;
   background: #17652E;
   margin-bottom: 0.8996539792vw;
+}
+.color-list__selected--color img, .color-list__selected--color svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
 }
 @media only screen and (max-width: 1100px) {
   .color-list__selected--color {

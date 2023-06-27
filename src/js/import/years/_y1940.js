@@ -75,10 +75,13 @@ if (document.querySelector('.js--color-slider')) {
             });
             if(filter==='all'){
                 wrap.find('.swiper-slide').css('display', '');
+                wrap.find('.color-list__selected--element').css('display', '');
             }
             else{
                 wrap.find('.swiper-slide').css('display', 'none');
                 wrap.find('.swiper-slide[data-filter="' + filter+'"').css('display', '').addClass("active");
+                wrap.find('.color-list__selected--element').css('display', 'none');
+                wrap.find('.color-list__selected--element[data-filter="' + filter+'"').css('display', '').addClass("active");
                 
                 
             }
