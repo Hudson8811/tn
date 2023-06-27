@@ -46,6 +46,9 @@
 			&--logo {
 				position: relative;
 				width: vw(180);
+				@include max(md) {
+					width: vw2(29);
+				}
 				img, svg {
 					position: relative;
 					width: 100%;

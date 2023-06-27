@@ -938,7 +938,7 @@
 	}
 	@include max(sm) {
 		position: relative;
-		min-height: vw2(390);
+		min-height: vw2(304);
 		height: auto;
 		top: auto;
 		left: auto;
@@ -965,11 +965,8 @@
 			transition: all 3s; 
 			bottom: 0%;
 			@include max(sm) {
-				bottom: vw2(84);
+				bottom: 0;
 			}
-		}
-		@include max(md) {
-			border-bottom: 1px solid #C7C7C7;
 		}
 		@include max(sm) {
 			bottom: -100%;
@@ -980,7 +977,6 @@
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
-			border-bottom: 1px solid #C7C7C7;
 		}
 		img,picture {
 			display: block;
@@ -1030,26 +1026,30 @@
 	}
 	&__button {
 		background: #fff;
-		&--wrap {
-			position: absolute;
-			top: vw(71);
-			right: vw(58);
-			width: auto;
+		position: absolute;
+		top: vw(71);
+		right: vw(58);
+		width: vw(188);
+		&--desc {
+			@include max(sm) {
+				display: none;
+			}
+
+		}
+		&--mob {
+			display: none;
 			@include max(sm) {
 				position: relative;
+				display: flex;
 				top: auto;
 				right: auto;
 				width: 100%;
 				max-width: 100%;
+				margin-top: vw2(18);
+
 			}	
 		}
-		@include max(sm) {
-			position: relative;
-			top: auto;
-			right: auto;
-			width: 100%;
-			max-width: 100%;
-		}		
+
 	}
 
 }

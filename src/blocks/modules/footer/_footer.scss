@@ -38,8 +38,11 @@
   &__top {
     justify-content: flex-start;
     align-items: flex-start;
+    
     @include max(md) {
       flex-flow: column nowrap;
+      padding-top: 0;
+      border-top: 1px solid #C7C7C7;
     }
     &--col {
       &:nth-child(1) {
