@@ -647,11 +647,12 @@
 			min-height: vw(108);
 			background: #17652E;
 			margin-bottom: vw(13);
+			overflow: hidden;
 			img,svg {
 				position: relative;
 				width: 100%;
 				height: 100%;
-				object-fit: contain;
+				object-fit: cover;
 				object-position: center center;
 			}
 			@include max(md) {
