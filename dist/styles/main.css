@@ -6131,6 +6131,9 @@ summary {
     bottom: -100%;
     transition: all 2s;
   }
+  .section2__title span {
+    opacity: 1;
+  }
 }
 .section2__title.active {
   bottom: 8.125vw;
@@ -6177,7 +6180,6 @@ summary {
 @media only screen and (max-width: 699px) {
   .section3 {
     flex-flow: column-reverse nowrap;
-    padding-top: 32.8125vw;
     position: relative;
     min-height: auto;
     height: auto;

@@ -195,6 +195,9 @@
 			left: vw2(17);
 			bottom: -100%;
 			transition: all 2s;
+			span {
+				opacity: 1;
+			}
 		}
 		&.active {
 			bottom: vw2(26);
@@ -240,7 +243,6 @@
 	}
 	@include max(sm) {
 		flex-flow: column-reverse nowrap;
-		padding-top: vw2(105);
 		position: relative;
 		min-height: auto;
 		height: auto;
