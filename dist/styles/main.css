@@ -7376,6 +7376,39 @@ summary {
   flex-flow: column nowrap;
   margin-bottom: 3.7370242215vw;
 }
+.surfaces-process__item--numb {
+  position: absolute;
+  top: 1.3148788927vw;
+  left: 1.0380622837vw;
+  width: 4.0830449827vw;
+  min-width: 4.0830449827vw;
+  height: 4.0830449827vw;
+  min-height: 4.0830449827vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  font-weight: 600;
+  font-size: 1.384083045vw;
+  line-height: 1.660899654vw;
+  border-radius: 50%;
+  z-index: 10;
+}
+@media only screen and (max-width: 1100px) {
+  .surfaces-process__item--numb {
+    top: 3.125vw;
+    left: 3.125vw;
+    width: 9.0625vw;
+    min-width: 9.0625vw;
+    height: 9.0625vw;
+    min-height: 9.0625vw;
+    background: #fff;
+    font-weight: 600;
+    font-size: 3.75vw;
+    line-height: 5.625vw;
+    border-radius: 50%;
+  }
+}
 .surfaces-process__item--picture {
   position: relative;
   display: block;
@@ -7407,6 +7440,7 @@ summary {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-flow: column nowrap;
   width: 100%;
 }
 @media only screen and (max-width: 1100px) {
@@ -7494,6 +7528,15 @@ summary {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+.prep .result__pictures {
+  width: 100%;
+  margin-left: 0;
+}
+.prep .result__picture-item {
+  flex: 0 1 100%;
+  max-width: 100%;
+  margin-left: 0;
 }
 .prep__item-end {
   position: relative;
