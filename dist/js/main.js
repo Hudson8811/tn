@@ -935,6 +935,12 @@ accordions.forEach(function (accordion) {
       openAccordion(accordion);
     }
   };
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.accordion').click(function () {
+  console.log();
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('html, body').stop().animate({
+    scrollTop: jquery__WEBPACK_IMPORTED_MODULE_0___default()('.accordions').offset().top
+  }, 1000);
 }); // accordions
 
 var tl = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({
