@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollToPlugin);
 //Lazy video
 
 var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
-console.log(lazyVideos)
+// console.log(lazyVideos)
 if ("IntersectionObserver" in window) {
     var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
     entries.forEach(function(video) {
@@ -225,18 +225,11 @@ let yValue = urlParams.get('y');
 
 function initAnimation(){
     s3Width =  $('.section3').innerWidth();
-    b1Width =  $('.section3__block--1').innerWidth();
-    b2Width =  $('.section3__block--2').innerWidth();
-    b3Width =  $('.section3__block--3').innerWidth();
-    b4Width =  $('.section3__block--4').innerWidth();
 
     scHeight = $('.scroll-page').innerHeight();
 
     s6Height =  $('.section6').innerHeight();
-    b1Height =  $('.section3__block--1').innerHeight();
-    b2Height =  $('.section3__block--2').innerHeight();
-    b3Height =  $('.section3__block--3').innerHeight();
-    b4Height =  $('.section3__block--4').innerHeight();
+
 
 
     if (window.innerWidth > 1100){
@@ -396,13 +389,6 @@ function initScrollAnimationDesktop(){
         duration: 1,
         ease: "none",
     } , ">+=1");
-    tl1.fromTo(".section3__title", {
-        y: '100vh',
-    }, {
-        y: '-102%',
-        duration:  2,
-        ease: "none",
-    } , ">+=0.2");
     tl1.addLabel('1943', "-=0.8");
     tl1.fromTo(".section4", {
         y: '100%',

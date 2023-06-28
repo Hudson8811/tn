@@ -70,8 +70,7 @@ gsap__WEBPACK_IMPORTED_MODULE_2__["default"].registerPlugin(gsap_ScrollTrigger__
 gsap__WEBPACK_IMPORTED_MODULE_2__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_4__["default"]);
 gsap__WEBPACK_IMPORTED_MODULE_2__["default"].registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_5__["default"]); //Lazy video
 
-var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
-console.log(lazyVideos);
+var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy")); // console.log(lazyVideos)
 
 if ("IntersectionObserver" in window) {
   var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
@@ -255,16 +254,8 @@ var yValue = urlParams.get('y');
 
 function initAnimation() {
   s3Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3').innerWidth();
-  b1Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--1').innerWidth();
-  b2Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--2').innerWidth();
-  b3Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--3').innerWidth();
-  b4Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--4').innerWidth();
   scHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scroll-page').innerHeight();
   s6Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section6').innerHeight();
-  b1Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--1').innerHeight();
-  b2Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--2').innerHeight();
-  b3Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--3').innerHeight();
-  b4Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--4').innerHeight();
 
   if (window.innerWidth > 1100) {
     initScrollAnimationDesktop();
@@ -413,13 +404,6 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">+=1");
-  tl1.fromTo(".section3__title", {
-    y: '100vh'
-  }, {
-    y: '-102%',
-    duration: 2,
-    ease: "none"
-  }, ">+=0.2");
   tl1.addLabel('1943', "-=0.8");
   tl1.fromTo(".section4", {
     y: '100%'
