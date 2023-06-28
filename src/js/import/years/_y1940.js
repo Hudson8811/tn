@@ -169,7 +169,15 @@ if (document.querySelector('.js--color-slider')) {
 	const openAccordion = (accordion) => {
 		const content = accordion.querySelector(".accordion__content");
 		accordion.classList.add("accordion__active");
+        var accordionActiveHeaight = $(".accordion__active .accordion__content").height();
+        if(typeof(accordionActiveHeaight) === "undefined") {
+            accordionActiveHeaight = 0;
+        }
 		content.style.maxHeight = content.scrollHeight + "px";
+        $('html, body').stop().animate({ scrollTop:$(accordion).offset().top - accordionActiveHeaight}, 300);
+        
+        console.log(accordionActiveHeaight);
+        
 	};
 
 	const closeAccordion = (accordion) => {
@@ -186,16 +194,16 @@ if (document.querySelector('.js--color-slider')) {
 			if (content.style.maxHeight) {
 				closeAccordion(accordion);
 			} else {
-				accordions.forEach((accordion) => closeAccordion(accordion));
-				openAccordion(accordion);
+                openAccordion(accordion);
+                $(accordions).not($(accordion)).each(function(){
+                    closeAccordion($(this)[0]);
+                });
 			}
 		};
 	});
 
  
-    $('.accordion').click(function(){
-        $('html, body').stop().animate({ scrollTop:$('.accordions').offset().top}, 1000);
-    });
+
 // accordions
 
 
