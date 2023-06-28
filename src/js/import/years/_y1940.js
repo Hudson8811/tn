@@ -10,6 +10,35 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 
+//Lazy video
+
+var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+console.log(lazyVideos)
+if ("IntersectionObserver" in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(function(video) {
+        if (video.isIntersecting) {
+        for (var source in video.target.children) {
+            var videoSource = video.target.children[source];
+            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+            videoSource.src = videoSource.dataset.src;
+            }
+        }
+
+        video.target.load();
+        video.target.classList.remove("lazy");
+        lazyVideoObserver.unobserve(video.target);
+        }
+    });
+    });
+
+    lazyVideos.forEach(function(lazyVideo) {
+    lazyVideoObserver.observe(lazyVideo);
+    });
+}
+
+//Lazy video
+
 var material = new Swiper(".js--material", {
     direction: "vertical",
     slidesPerView: 3,
@@ -61,18 +90,18 @@ if (document.querySelector('.js--color-slider')) {
         wrap.find('.color-list__item').on( 'click', function() {
             var filter = $(this).attr('data-filter');
             $(".color-list__item").removeClass("active");
-            var selectedColor = {
-                6005: "#195147",
-                3005: "#733C3F",
-            }
+            // var selectedColor = {
+            //     6005: "#195147",
+            //     3005: "#733C3F",
+            // }
             
-            $.each(selectedColor, function(key, value){
-                if(key == filter) {
-                    var bg = value;
-                    // $("#product_img").attr("src", image_path);
-                    wrap.find('.color-list__selected--color').css("background-color", bg);
-               }
-            });
+            // $.each(selectedColor, function(key, value){
+            //     if(key == filter) {
+            //         var bg = value;
+            //         // $("#product_img").attr("src", image_path);
+            //         wrap.find('.color-list__selected--color').css("background-color", bg);
+            //    }
+            // });
             if(filter==='all'){
                 wrap.find('.swiper-slide').css('display', '');
                 wrap.find('.color-list__selected__element').css('display', '');
@@ -163,10 +192,10 @@ if (document.querySelector('.js--color-slider')) {
 		};
 	});
 
-    // $('.accordion').click(function(){
-    //     console.log ()
-    //     $('html, body').stop().animate({ scrollTop:$('.accordions').offset().top}, 1000);
-    //   });
+ 
+    $('.accordion').click(function(){
+        $('html, body').stop().animate({ scrollTop:$('.accordions').offset().top}, 1000);
+    });
 // accordions
 
 
@@ -237,7 +266,12 @@ $(window).on('resize',function (){
         tl2.clear();
         tl3.clear();
         gsap.set(".loader__center, .loader__back, .section1__house, .section1 .header, .sidebar, .section1__title," +
-            ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {clearProps:"all"});
+        ".section2, .section2__title, .section2__subtitle, .section2__video" +    
+        ".section3, .section3__subtitle, .material, .material-foto" +    
+        ".section4, .section4__title, .section4__subtitle, .color-slider, .color-list__selected" +   
+        ".section5, .section5__title, .section5__subtitle, .section5__video , .color-list__selected" + 
+        ".section6, .section6__title, .section6__subtitle," + 
+        ".scroll-page, .fullPageOverlay", {clearProps:"all"});
         window.scrollTo({
             top: 0,
             behavior: "instant"
