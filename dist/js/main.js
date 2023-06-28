@@ -408,7 +408,7 @@ function initScrollAnimationDesktop() {
     y: '0%',
     duration: 1,
     ease: "none"
-  }, ">+=1");
+  }, ">");
   tl1.addLabel('1943', "-=0.8");
   tl1.fromTo(".section4", {
     y: '100%'
@@ -416,7 +416,7 @@ function initScrollAnimationDesktop() {
     y: '0%',
     duration: 1,
     ease: "none"
-  }, ">-=2");
+  }, ">+=0.4");
   tl1.fromTo(".section5", {
     y: '100%'
   }, {
