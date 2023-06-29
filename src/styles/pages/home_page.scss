@@ -587,14 +587,16 @@
 	justify-content: center;
 	align-items: stretch;
 	width: 100%;
+	height: calc(100vh - 200px);
 	flex-flow: row wrap;
-
+	overflow-y: auto;
 	@include max(md) {
 		width: 100%;
 		flex-flow: row nowrap;
 		overflow-x: auto;
 		justify-content: flex-start;
-		padding-bottom: vw2(5)
+		padding-bottom: vw2(5);
+		height: auto;
 	}
 	&__wrap {
 		position: relative;
