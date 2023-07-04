@@ -9,6 +9,19 @@ $(window).on('load', function () {
         $('body').addClass('active');
     }
 });
+$(document).ready(function () {
+    $('#mobileMenu').on('change',function(){
+        if ($(this).is(':checked')) {
+            $('html, body').scrollTop(0);
+            $('body').addClass('disabled');
+        } else {
+            $('body').removeClass('disabled');
+        }
+    });
+    $('.menu-items a').on('click',function(){
+        $('#mobileMenu').prop('checked',false).trigger('change');
+    });
+});
 function setCssRootVars() {
     let baseRatio = 2010 / 1080;
     let windowWidth = $(window).innerWidth();

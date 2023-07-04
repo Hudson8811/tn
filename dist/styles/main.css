@@ -3258,6 +3258,9 @@ body {
 body:not(.active) {
   overflow: hidden !important;
 }
+body.disabled {
+  overflow: hidden !important;
+}
 
 *:not(.color-list)::-webkit-scrollbar {
   display: none;

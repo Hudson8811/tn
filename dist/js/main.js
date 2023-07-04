@@ -21,6 +21,19 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
   }
 });
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#mobileMenu').on('change', function () {
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).is(':checked')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('html, body').scrollTop(0);
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('disabled');
+    } else {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('disabled');
+    }
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu-items a').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#mobileMenu').prop('checked', false).trigger('change');
+  });
+});
 
 function setCssRootVars() {
   var baseRatio = 2010 / 1080;

@@ -11,6 +11,9 @@ body{
 	&:not(.active){
 		overflow: hidden !important;
 	}
+	&.disabled{
+		overflow: hidden !important;
+	}
 }
 
 *:not(.color-list)::-webkit-scrollbar {
