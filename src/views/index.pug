@@ -12,6 +12,10 @@ block content
 	//- .wrapper
 		//- include ../blocks/modules/sidebar/sidebar
 
+	.home-page-preloader
+		picture
+			source(srcset="img/main/start.png" media="(max-width: 699px)")
+			img(src="img/main/start.png" alt="")
 	.scroll-page.home-page
 		include ../blocks/modules/mobnav/mobnav
 		.section1
@@ -27,7 +31,7 @@ block content
 
 		.section2#product
 			video.video.section2__video.lazy(autoplay muted loop playsinline poster="")
-				source(data-src="video/video--1.mp4", type="video/mp4")
+				source(data-src="video/video--1.mp4" data-srcmobile="video/video--1-m.mp4" type="video/mp4")
 			.section2__title.blockTitle.blockTitle--desc
 				span Равномерное и долговечное покрытие.
 				br
@@ -209,7 +213,7 @@ block content
 			.section5__col
 				.section5__video 
 					video.video.lazy(autoplay muted loop playsinline poster="")
-						source(data-src="video/video--2.mp4", type="video/mp4")
+						source(data-src="video/video--2.mp4" data-srcmobile="video/video--2-m.mp4" type="video/mp4")
 				.button.section5__button Купить онлайн
 			.section5__col
 				.section5__title.section5__title--mob.blockTitle.blockTitle--mob
