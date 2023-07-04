@@ -250,9 +250,11 @@ function initAnimation(){
     } else if(window.innerWidth > 699){
         initScrollAnimationTablet();
         initMode = 'tablet';
+        $('body').addClass('active');
     } else {
         initScrollAnimationMobile();
         initMode = 'mobile';
+        $('body').addClass('active');
     }
 }
 
@@ -583,6 +585,7 @@ function initScrollAnimationTablet(){
       //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
       });
     }
+
 
 }
 function initScrollAnimationMobile(){

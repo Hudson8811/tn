@@ -272,9 +272,11 @@ function initAnimation() {
   } else if (window.innerWidth > 699) {
     initScrollAnimationTablet();
     initMode = 'tablet';
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
   } else {
     initScrollAnimationMobile();
     initMode = 'mobile';
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
   }
 }
 
