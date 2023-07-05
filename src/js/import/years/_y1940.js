@@ -369,6 +369,13 @@ function initScrollAnimationDesktop(){
         duration:  1.5,
         ease: "power2.out",
     } , ">-0.6");
+    tl.fromTo(".section1 .scroll-down", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration:  1.5,
+        ease: "power2.out",
+    } , "<");
     tl.fromTo(".section1__house", {
         filter: 'grayscale(100%)'
     }, {
