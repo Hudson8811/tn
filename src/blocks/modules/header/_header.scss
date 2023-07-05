@@ -56,6 +56,21 @@
 					object-fit: contain;
 					object-position: left center;
 				}
+				span{
+					position: absolute;
+					top: 40%;
+					left: vw(43);
+					font-weight: 400;
+					font-size: vw(12.5);
+					@include max(md){
+						left: 9vw;
+						font-size: 2.25vw;
+					}
+					@include max(sm) {
+						left: vw2(33);
+						font-size: vw2(8.5);
+					}
+				}
 			}
 		}
 	}

@@ -263,8 +263,8 @@ var tl = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.loader').addClass('hide');
   }
 });
-var initMode;
-var addTime = 1200;
+var initMode = null;
+var addTime = 1100;
 var st1, st2, st3;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({});
 var tl2 = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({});
@@ -280,15 +280,44 @@ function initAnimation() {
   s6Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section6').innerHeight();
 
   if (window.innerWidth > 1100) {
-    initScrollAnimationDesktop();
-    initMode = 'desk';
+    if (initMode != 'desk') {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant"
+      });
+      initMode = 'desk';
+      reInit();
+      initScrollAnimationDesktop();
+    }
   } else if (window.innerWidth > 699) {
-    initScrollAnimationTablet();
-    initMode = 'tablet';
+    if (initMode != 'tablet') {
+      if (initMode != null) {
+        window.scrollTo({
+          top: 0,
+          behavior: "instant"
+        });
+      }
+
+      initMode = 'tablet';
+      reInit();
+      initScrollAnimationTablet();
+    }
+
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
   } else {
-    initScrollAnimationMobile();
-    initMode = 'mobile';
+    if (initMode != 'mobile') {
+      if (initMode != null) {
+        window.scrollTo({
+          top: 0,
+          behavior: "instant"
+        });
+      }
+
+      initMode = 'mobile';
+      reInit();
+      initScrollAnimationMobile();
+    }
+
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
   }
 }
@@ -300,26 +329,30 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
   var wwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
 
   if (dwidth !== wwidth) {
-    if (typeof st1 !== "undefined") st1.kill();
-    if (typeof st2 !== "undefined") st2.kill();
-    if (typeof st3 !== "undefined") st3.kill();
-    tl.clear();
-    tl1.clear();
-    tl2.clear();
-    tl3.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_2__["default"].set(".loader__center, .loader__back, .section1__house, .section1 .header, .sidebar, .section1__title," + ".section2, .section2__title, .section2__subtitle, .section2__video" + ".section3, .section3__subtitle, .material, .material-foto" + ".section4, .section4__title, .section4__subtitle, .color-slider, .color-list__selected" + ".section5, .section5__title, .section5__subtitle, .section5__video , .color-list__selected" + ".section6, .section6__title, .section6__subtitle," + ".scroll-page, .fullPageOverlay", {
-      clearProps: "all"
-    });
-    window.scrollTo({
-      top: 0,
-      behavior: "instant"
-    });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.loader').removeClass('hide');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__global, .sidebar__burger, .sidebar__menu').removeClass('active');
     initAnimation();
   }
 });
+
+function reInit() {
+  if (typeof st1 !== "undefined") st1.kill();
+  if (typeof st2 !== "undefined") st2.kill();
+  if (typeof st3 !== "undefined") st3.kill();
+  tl.clear();
+  tl1.clear();
+  tl2.clear();
+  tl3.clear();
+  gsap__WEBPACK_IMPORTED_MODULE_2__["default"].set(".loader__center, .loader__back, .section1__house, .section1 .header, .sidebar, .section1__title," + ".section2, .section2__title, .section2__subtitle, .section2__video" + ".section3, .section3__subtitle, .material, .material-foto" + ".section4, .section4__title, .section4__subtitle, .color-slider, .color-list__selected" + ".section5, .section5__title, .section5__subtitle, .section5__video , .color-list__selected" + ".section6, .section6__title, .section6__subtitle," + ".scroll-page, .fullPageOverlay", {
+    clearProps: "all"
+  });
+  /*window.scrollTo({
+      top: 0,
+      behavior: "instant"
+  });*/
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.loader').removeClass('hide');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__global, .sidebar__burger, .sidebar__menu').removeClass('active');
+}
 
 function initScrollAnimationDesktop() {
   // tl.to(".loader__center", {
@@ -364,7 +397,7 @@ function initScrollAnimationDesktop() {
     duration: 2,
     ease: "slow(0.7, 0.7, false)"
   }, ">");
-  tl1.addLabel('1941', "+=1.1");
+  tl1.addLabel('product', "1.1");
   tl1.fromTo(".section2", {
     y: '100%'
   }, {
@@ -378,7 +411,7 @@ function initScrollAnimationDesktop() {
     y: '-102%',
     duration: 1.8,
     ease: "none"
-  }, ">+=0.2");
+  }, ">-=0.6");
   tl1.fromTo(".section2__title span:nth-child(1)", {
     opacity: 1
   }, {
@@ -421,15 +454,14 @@ function initScrollAnimationDesktop() {
     duration: 0.075,
     ease: "none"
   }, ">");
-  tl1.addLabel('1942', "+=1.4");
   tl1.fromTo(".section3", {
     y: '100%'
   }, {
     y: '0%',
     duration: 1,
     ease: "none"
-  }, ">");
-  tl1.addLabel('1943', "-=0.8");
+  }, ">-=0.1");
+  tl1.addLabel('material', "+=0.1");
   tl1.fromTo(".section4", {
     y: '100%'
   }, {
@@ -437,41 +469,42 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">+=0.4");
+  tl1.addLabel('color', "+=0.1");
   tl1.fromTo(".section5", {
     y: '100%'
   }, {
     y: '0%',
     duration: 1,
     ease: "none"
-  }, ">+=0.5");
+  }, ">+=1");
   tl1.fromTo(".section5__title", {
     y: '100vh'
   }, {
-    y: '-115%',
-    duration: 1.5,
+    y: '-70%',
+    duration: 1.2,
     ease: "none"
-  }, ">+=0.2");
+  }, ">-=1");
   tl1.fromTo(".section5__title span:nth-child(1)", {
     opacity: 1
   }, {
     opacity: 0.25,
-    duration: 0.5,
+    duration: 0.125,
     ease: "none"
-  }, "<+=0.3");
+  }, "<+=0.65");
   tl1.fromTo(".section5__title span:nth-child(3)", {
     opacity: 0.25
   }, {
     opacity: 1,
     duration: 0.075,
     ease: "none"
-  }, ">-=0.3");
+  }, ">");
   tl1.fromTo(".section5__title span:nth-child(3)", {
     opacity: 1
   }, {
     opacity: 0.25,
     duration: 0.125,
     ease: "none"
-  }, ">+=0.125");
+  }, ">+=0.1");
   tl1.fromTo(".section5__title span:nth-child(5)", {
     opacity: 0.25
   }, {
@@ -479,7 +512,7 @@ function initScrollAnimationDesktop() {
     duration: 0.075,
     ease: "none"
   }, ">");
-  tl1.addLabel('1944', "+=0.8"); // tl1.fromTo(".section6", {
+  tl1.addLabel('1944', "+=0.6"); // tl1.fromTo(".section6", {
   //     y: '100%',
   // }, {
   //     y: '0%',
@@ -504,6 +537,7 @@ function initScrollAnimationDesktop() {
   //     ease: "none",
   // } , ">");
 
+  gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__["default"].clearScrollMemory('manual');
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__["default"].create({
     trigger: ".scroll-page",
     pin: true,
@@ -708,8 +742,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header__menu .header__menu-item 
 
   if (link !== null) {
     var _yValue = getParameterFromString(link, "y");
-
-    console.log(_yValue);
 
     if (_yValue !== null) {
       scrollToYear(_yValue);

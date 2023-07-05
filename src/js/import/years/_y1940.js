@@ -10,6 +10,8 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 
+
+
 //Lazy video
 
 var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
@@ -219,8 +221,10 @@ let tl = gsap.timeline({
 });
 
 
-var initMode;
-let addTime = 1200;
+var initMode = null;
+
+
+let addTime = 1100;
 
 let st1, st2, st3;
 let tl1 = gsap.timeline({});
@@ -243,17 +247,43 @@ function initAnimation(){
     s6Height =  $('.section6').innerHeight();
 
 
-
     if (window.innerWidth > 1100){
-        initScrollAnimationDesktop();
-        initMode = 'desk';
+        if (initMode != 'desk'){
+            window.scrollTo({
+                top: 0,
+                behavior: "instant"
+            });
+            initMode = 'desk';
+            reInit();
+            initScrollAnimationDesktop();
+        }
     } else if(window.innerWidth > 699){
-        initScrollAnimationTablet();
-        initMode = 'tablet';
+        if (initMode != 'tablet'){
+            if (initMode != null){
+                window.scrollTo({
+                    top: 0,
+                    behavior: "instant"
+                });
+            }
+            initMode = 'tablet';
+            reInit();
+            initScrollAnimationTablet();
+        }
+
         $('body').addClass('active');
     } else {
-        initScrollAnimationMobile();
-        initMode = 'mobile';
+        if (initMode != 'mobile'){
+            if (initMode != null){
+                window.scrollTo({
+                    top: 0,
+                    behavior: "instant"
+                });
+            }
+            initMode = 'mobile';
+            reInit();
+            initScrollAnimationMobile();
+        }
+
         $('body').addClass('active');
     }
 }
@@ -265,30 +295,34 @@ var dwidth = $(window).width();
 $(window).on('resize',function (){
     var wwidth = $(window).width();
     if(dwidth!==wwidth){
-        if (typeof st1 !== "undefined") st1.kill();
-        if (typeof st2 !== "undefined") st2.kill();
-        if (typeof st3 !== "undefined") st3.kill();
-        tl.clear();
-        tl1.clear();
-        tl2.clear();
-        tl3.clear();
-        gsap.set(".loader__center, .loader__back, .section1__house, .section1 .header, .sidebar, .section1__title," +
-        ".section2, .section2__title, .section2__subtitle, .section2__video" +    
-        ".section3, .section3__subtitle, .material, .material-foto" +    
-        ".section4, .section4__title, .section4__subtitle, .color-slider, .color-list__selected" +   
-        ".section5, .section5__title, .section5__subtitle, .section5__video , .color-list__selected" + 
-        ".section6, .section6__title, .section6__subtitle," + 
-        ".scroll-page, .fullPageOverlay", {clearProps:"all"});
-        window.scrollTo({
-            top: 0,
-            behavior: "instant"
-        });
-        $('body').removeClass('active');
-        $('.loader').removeClass('hide');
-        $('.sidebar__global, .sidebar__burger, .sidebar__menu').removeClass('active');
+
         initAnimation();
     }
 });
+
+function reInit(){
+    if (typeof st1 !== "undefined") st1.kill();
+    if (typeof st2 !== "undefined") st2.kill();
+    if (typeof st3 !== "undefined") st3.kill();
+    tl.clear();
+    tl1.clear();
+    tl2.clear();
+    tl3.clear();
+    gsap.set(".loader__center, .loader__back, .section1__house, .section1 .header, .sidebar, .section1__title," +
+        ".section2, .section2__title, .section2__subtitle, .section2__video" +
+        ".section3, .section3__subtitle, .material, .material-foto" +
+        ".section4, .section4__title, .section4__subtitle, .color-slider, .color-list__selected" +
+        ".section5, .section5__title, .section5__subtitle, .section5__video , .color-list__selected" +
+        ".section6, .section6__title, .section6__subtitle," +
+        ".scroll-page, .fullPageOverlay", {clearProps:"all"});
+    /*window.scrollTo({
+        top: 0,
+        behavior: "instant"
+    });*/
+    $('body').removeClass('active');
+    $('.loader').removeClass('hide');
+    $('.sidebar__global, .sidebar__burger, .sidebar__menu').removeClass('active');
+}
 
 function initScrollAnimationDesktop(){
 
@@ -338,7 +372,7 @@ function initScrollAnimationDesktop(){
         ease: "slow(0.7, 0.7, false)",
     } , ">");
 
-    tl1.addLabel('1941', "+=1.1");
+    tl1.addLabel('product', "1.1");
     tl1.fromTo(".section2", {
         y: '100%',
     }, {
@@ -353,7 +387,7 @@ function initScrollAnimationDesktop(){
         y: '-102%',
         duration:  1.8,
         ease: "none",
-    } , ">+=0.2");
+    } , ">-=0.6");
     tl1.fromTo(".section2__title span:nth-child(1)", {
         opacity: 1
     }, {
@@ -396,15 +430,14 @@ function initScrollAnimationDesktop(){
         duration:  0.075,
         ease: "none",
     } , ">");
-    tl1.addLabel('1942', "+=1.4");
     tl1.fromTo(".section3", {
         y: '100%',
     }, {
         y: '0%',
         duration: 1,
         ease: "none",
-    } , ">");
-    tl1.addLabel('1943', "-=0.8");
+    } , ">-=0.1");
+    tl1.addLabel('material', "+=0.1");
     tl1.fromTo(".section4", {
         y: '100%',
     }, {
@@ -412,41 +445,42 @@ function initScrollAnimationDesktop(){
         duration: 1,
         ease: "none",
     } , ">+=0.4");
+    tl1.addLabel('color', "+=0.1");
     tl1.fromTo(".section5", {
         y: '100%',
     }, {
         y: '0%',
         duration: 1,
         ease: "none",
-    } , ">+=0.5");
+    } , ">+=1");
     tl1.fromTo(".section5__title", {
         y: '100vh',
     }, {
-        y: '-115%',
-        duration: 1.5,
+        y: '-70%',
+        duration: 1.2,
         ease: "none",
-    } , ">+=0.2");
+    } , ">-=1");
     tl1.fromTo(".section5__title span:nth-child(1)", {
         opacity: 1
     }, {
         opacity: 0.25,
-        duration:  0.5,
+        duration:  0.125,
         ease: "none",
-    } , "<+=0.3");
+    } , "<+=0.65");
     tl1.fromTo(".section5__title span:nth-child(3)", {
         opacity: 0.25,
     }, {
         opacity: 1,
         duration:  0.075,
         ease: "none",
-    } , ">-=0.3");
+    } , ">");
     tl1.fromTo(".section5__title span:nth-child(3)", {
         opacity: 1,
     }, {
         opacity: 0.25,
         duration:  0.125,
         ease: "none",
-    } , ">+=0.125");
+    } , ">+=0.1");
     tl1.fromTo(".section5__title span:nth-child(5)", {
         opacity: 0.25,
     }, {
@@ -454,7 +488,7 @@ function initScrollAnimationDesktop(){
         duration:  0.075,
         ease: "none",
     } , ">");
-    tl1.addLabel('1944', "+=0.8");
+    tl1.addLabel('1944', "+=0.6");
     // tl1.fromTo(".section6", {
     //     y: '100%',
     // }, {
@@ -480,6 +514,9 @@ function initScrollAnimationDesktop(){
     //     ease: "none",
     // } , ">");
 
+
+    ScrollTrigger.clearScrollMemory('manual') ;
+
     st1 = ScrollTrigger.create({
         trigger: ".scroll-page",
         pin: true,
@@ -488,28 +525,33 @@ function initScrollAnimationDesktop(){
         scrub: 0, //2.5
         animation: tl1,
     });
+
+
+
+
+
     const section7 = document.getElementById('section7');
 
     if( section7 !== null ) {
     document.addEventListener('scroll', function() {
         const posTop = section7.getBoundingClientRect().top;
-        
+
         // Блок достиг верхней границы экрана (или выше)
       //   elem.classList.toggle('visible', posTop <= 0);
         if(posTop <= 0) {
             let balon = document.querySelector(".section7__picture")
             balon.classList.add("active")
-            
+
         }
-        
+
         // Блок только появляется снизу (или выше)
         //   if(posTop < window.innerHeight) {
         //       let balon = document.querySelector(".section7__picture")
         //       balon.classList.add("active")
-              
+
         //   }
       //   elem.classList.toggle('visible', posTop < window.innerHeight);
-          
+
         // Блок целиком находится в видимой зоне
       //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
       });
@@ -712,7 +754,6 @@ $('.header__menu .header__menu-item a').on('click',function (){
     let link = $(this).attr('href');
     if (link !== null){
         let yValue = getParameterFromString(link, "y");
-        console.log(yValue)
         if (yValue !== null) {
             scrollToYear(yValue);
         }
