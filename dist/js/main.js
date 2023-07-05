@@ -73,6 +73,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       scrollTop: 0
     }, '300');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
+    setCssRootVars();
+  });
 });
 
 function setCssRootVars() {
@@ -608,7 +611,7 @@ function initScrollAnimationDesktop() {
       var posTop = section7.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
       //   elem.classList.toggle('visible', posTop <= 0);
 
-      if (posTop <= 0) {
+      if (posTop <= jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).innerHeight() / 3) {
         var balon = document.querySelector(".section7__picture");
         balon.classList.add("active");
       } // Блок только появляется снизу (или выше)
@@ -668,7 +671,7 @@ function initScrollAnimationTablet() {
       var posTop = section7.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
       //   elem.classList.toggle('visible', posTop <= 0);
 
-      if (posTop <= 0) {
+      if (posTop <= jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).innerHeight()) {
         var balon = document.querySelector(".section7__picture");
         balon.classList.add("active");
       } // Блок только появляется снизу (или выше)
@@ -728,7 +731,7 @@ function initScrollAnimationMobile() {
       var posTop = section7.getBoundingClientRect().top; // Блок достиг верхней границы экрана (или выше)
       //   elem.classList.toggle('visible', posTop <= 0);
 
-      if (posTop <= 0) {
+      if (posTop <= jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).innerHeight()) {
         var balon = document.querySelector(".section7__picture");
         balon.classList.add("active");
       } // Блок только появляется снизу (или выше)

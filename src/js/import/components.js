@@ -60,6 +60,9 @@ $(document).ready(function () {
             scrollTop: 0
         }, '300');
     });
+    $(window).on('resize',function (){
+        setCssRootVars();
+    });
 });
 function setCssRootVars() {
     let baseRatio = 2010 / 1080;

@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  background: #252522;
+  background: #252525;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -20,7 +20,7 @@
     position: relative;
     display: flex;
     width: 100%;
-    background: #252522;
+    background: #252525;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
@@ -30,7 +30,6 @@
     width: 100%;
     display: flex;
     padding-top: vw(29);
-    margin-bottom: vw(29);
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     @include max(md) {
       border-top: none;

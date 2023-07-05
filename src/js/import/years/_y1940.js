@@ -551,7 +551,7 @@ function initScrollAnimationDesktop(){
 
         // Блок достиг верхней границы экрана (или выше)
       //   elem.classList.toggle('visible', posTop <= 0);
-        if(posTop <= 0) {
+        if(posTop <= $(window).innerHeight() / 3) {
             let balon = document.querySelector(".section7__picture")
             balon.classList.add("active")
 
@@ -622,7 +622,7 @@ function initScrollAnimationTablet(){
         
         // Блок достиг верхней границы экрана (или выше)
       //   elem.classList.toggle('visible', posTop <= 0);
-        if(posTop <= 0) {
+        if(posTop <= $(window).innerHeight()) {
             let balon = document.querySelector(".section7__picture")
             balon.classList.add("active")
             
@@ -693,7 +693,7 @@ function initScrollAnimationMobile(){
         
         // Блок достиг верхней границы экрана (или выше)
       //   elem.classList.toggle('visible', posTop <= 0);
-        if(posTop <= 0) {
+        if(posTop <= $(window).innerHeight()) {
             let balon = document.querySelector(".section7__picture")
             balon.classList.add("active")
             
