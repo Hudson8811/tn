@@ -9,6 +9,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	box-sizing: border-box;
 	@include max(md){
 		display: none;
 	}
@@ -90,5 +91,27 @@
 			border: 1px solid $red;
 			color: #ffffff !important;
 		}
+	}
+}
+.fixed-header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+
+	background: #e8e6e7;
+	padding-top: vw(5);
+	padding-bottom: vw(5);
+	align-items: center;
+	box-shadow: 0 0 vw(5) #c9c4c1;
+	transition: transform 0.3s ease;
+
+	&:not(.active){
+		transform: translateY(-100%);
+	}
+
+	@include max(md) {
+		display: none;
 	}
 }

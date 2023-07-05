@@ -17,6 +17,7 @@
 		height: 100%;
 		object-position: right bottom;
 		object-fit: cover;
+		transform: translateX(-14px);
 		@include max(md) {
 			display: none;
 		}
@@ -90,7 +91,7 @@
 	}
 
 	&__house {
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 		position: absolute;
 		left: 0;
@@ -318,7 +319,7 @@
 		width: vw(440);
 		position: absolute;
 		left: vw(36);
-		top: vw(36);
+		top: vw(110);
 		z-index: 25;
 		color: #fff;
 		font-style: normal;
@@ -543,10 +544,10 @@
 		}
 	}
 	&__title {
-		width: vw(693);
+		width: vw(960);
 		position: absolute;
 		left: vw(36);
-		top: vw(36);
+		top: vw(95);
 		z-index: 25;
 		@include max(md) {
 			width: vw2(281);
@@ -820,6 +821,7 @@
 	padding-left: vw(38);
 	padding-right: vw(38);
 	padding-bottom: vw(46);
+	box-sizing: border-box;
 	@include max(md) {
 		position: relative;
 		min-height: auto;
@@ -925,6 +927,7 @@
 	padding-left: vw(38);
 	padding-right: vw(38);
 	padding-bottom: vw(46);
+	box-sizing: border-box;
 	@include max(md) {
 		position: relative;
 		min-height: auto;
@@ -985,6 +988,7 @@
 	padding-left: vw(38);
 	padding-right: vw(38);
 	padding-bottom: vw(46);
+	box-sizing: border-box;
 	@include max(md) {
 		position: relative;
 		min-height: vw(990);

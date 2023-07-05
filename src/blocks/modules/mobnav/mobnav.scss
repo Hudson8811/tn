@@ -24,7 +24,8 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  height: 62px;
+  height: vw2(40);
+	box-sizing: border-box;
   @include max(md) {
    padding-top: vw2(20)
   }
@@ -150,4 +151,27 @@
 
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
+}
+
+
+.navbar{
+	&.fixed{
+		position: fixed;
+		background: #e8e6e7;
+		.nav-container{
+			padding-top: vw2(5);
+			padding-bottom: vw2(5);
+		}
+
+		&:not(.active){
+			transform: translateY(-100%);
+		}
+		&.active{
+			box-shadow: 0 0 vw2(5) #c9c4c1;
+		}
+		&.animate{
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+		}
+	}
+
 }
