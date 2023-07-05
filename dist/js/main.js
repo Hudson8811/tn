@@ -164,6 +164,7 @@ var material = new swiper__WEBPACK_IMPORTED_MODULE_1__.Swiper(".js--material", {
   loop: false,
   pagination: true,
   autoHeight: true,
+  slideToClickedSlide: true,
   speed: 300
 });
 var materialFoto = new swiper__WEBPACK_IMPORTED_MODULE_1__.Swiper(".js--material-foto", {

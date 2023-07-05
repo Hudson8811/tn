@@ -181,7 +181,6 @@
       svg {
         position: relative;
         display: block;
-        width: 100%;
         @include max(md) {
           margin-right: vw2(5);
           height: auto;

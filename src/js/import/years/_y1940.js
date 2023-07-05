@@ -53,6 +53,7 @@ var material = new Swiper(".js--material", {
     loop: false,
     pagination: true,
     autoHeight: true,
+    slideToClickedSlide: true,
     speed: 300,
 });
 var materialFoto = new Swiper(".js--material-foto", {
