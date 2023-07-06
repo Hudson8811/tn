@@ -331,6 +331,11 @@
 		}
 	}
 
+	.scroll-down{
+		z-index: 20;
+		left: auto;
+		right: vw(5);
+	}
 }
 
 .material {

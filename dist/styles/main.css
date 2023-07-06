@@ -6061,6 +6061,11 @@ img {
     background: #252525;
   }
 }
+.section3 .scroll-down {
+  z-index: 20;
+  left: auto;
+  right: 0.3460207612vw;
+}
 
 .material {
   position: relative;
