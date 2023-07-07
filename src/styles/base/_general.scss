@@ -302,13 +302,12 @@ img{
 .to-top{
 	position: fixed;
 	bottom: vw(25);
-	right: vw(20);
-	background: rgba(255, 255, 255, 1);
+	right: vw(15);
 	width: vw(59);
 	height: vw(59);
 	border-radius: 50%;
-	color: #000;
-	box-shadow: 0 0 vw(10) #252525;
+	color: rgba(0, 0, 0, 0.7);
+	box-shadow: 0 0 vw(5) rgba(105, 105, 105, 0.5);
 	z-index: 9998;
 	cursor: pointer;
 	display: flex;
@@ -316,6 +315,9 @@ img{
 	justify-content: center;
 	transform: rotate(-90deg);
 	transition: all 0.3s;
+
+	backdrop-filter: blur(6px);
+	background: rgb(255 255 255 / 20%);
 
 	@include max(sm) {
 		width: vw2(38);

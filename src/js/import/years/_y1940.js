@@ -229,7 +229,7 @@ let tl = gsap.timeline({
 var initMode = null;
 
 
-let addTime = 1100;
+let addTime = 1050;
 
 let st1, st2, st3;
 let tl1 = gsap.timeline({});
@@ -404,60 +404,105 @@ function initScrollAnimationDesktop(){
     }, {
         y: '-102%',
         duration:  1.8,
-        ease: "none",
-        onReverseComplete: function (){
-            $('.fixed-header').removeClass('active')
-        }
+        ease: "none"
     } , ">-=0.6");
+
+
+    //1.2
+
+
+    tl1.fromTo(".section2__title span:nth-child(1)", {
+        opacity: 0.25
+    }, {
+        opacity: 1,
+        duration:  0.05,
+        ease: "none"
+    } , "<+=0.45");
     tl1.fromTo(".section2__title span:nth-child(1)", {
         opacity: 1
     }, {
         opacity: 0.25,
-        duration:  0.5,
+        duration:  0.05,
         ease: "none",
-    } , "<+=0.3");
+    } , ">+=0.15");
+
+    tl1.fromTo(".section2__title span:nth-child(2)", {
+        opacity: 0.25,
+    }, {
+        opacity: 1,
+        duration:  0.05,
+        ease: "none",
+        onReverseComplete: function (){
+            $('.fixed-header').removeClass('active')
+        }
+    } , ">-=0.10");
+    tl1.fromTo(".section2__title span:nth-child(2)", {
+        opacity: 1,
+    }, {
+        opacity: 0.25,
+        duration:  0.05,
+        ease: "none",
+    } , ">+=0.15");
+
     tl1.fromTo(".section2__title span:nth-child(3)", {
         opacity: 0.25,
     }, {
         opacity: 1,
-        duration:  0.075,
+        duration:  0.05,
         ease: "none",
-    } , ">-=0.3");
+    } , ">-=0.10");
     tl1.fromTo(".section2__title span:nth-child(3)", {
         opacity: 1,
     }, {
         opacity: 0.25,
-        duration:  0.125,
+        duration:  0.05,
         ease: "none",
-    } , ">+=0.25");
+    } , ">+=0.15");
+
     tl1.fromTo(".section2__title span:nth-child(4)", {
         opacity: 0.25,
     }, {
         opacity: 1,
-        duration:  0.075,
+        duration:  0.05,
         ease: "none",
-    } , ">");
+    } , ">-=0.15");
     tl1.fromTo(".section2__title span:nth-child(4)", {
         opacity: 1,
     }, {
         opacity: 0.25,
-        duration:  0.125,
+        duration:  0.05,
         ease: "none",
-    } , ">+=0.25");
-    tl1.fromTo(".section2__title span:nth-child(6)", {
+    } , ">+=0.15");
+
+    tl1.fromTo(".section2__title span:nth-child(5)", {
         opacity: 0.25,
     }, {
         opacity: 1,
-        duration:  0.075,
+        duration:  0.05,
         ease: "none",
-    } , ">");
+    } , ">-=0.10");
+    tl1.fromTo(".section2__title span:nth-child(5)", {
+        opacity: 1,
+    }, {
+        opacity: 0.25,
+        duration:  0.05,
+        ease: "none",
+    } , ">+=0.15");
+
+
+
     tl1.fromTo(".section3", {
         y: '100%',
     }, {
         y: '0%',
         duration: 1,
         ease: "none",
-    } , ">-=0.1");
+        onComplete: function (){
+            $('.swiper-button-next.material-foto--button').addClass('tip');
+        }
+    } , ">+=0.3");
+
+
     tl1.addLabel('material', "+=0.1");
     tl1.fromTo(".section4", {
         y: '100%',
@@ -473,42 +518,64 @@ function initScrollAnimationDesktop(){
         y: '0%',
         duration: 1,
         ease: "none",
-    } , ">+=1");
+    } , ">+=0.4");
     tl1.fromTo(".section5__title", {
         y: '100vh',
     }, {
-        y: '-70%',
-        duration: 1.2,
+        y: '-38%',
+        duration: 1.03,
         ease: "none",
     } , ">-=1");
+
+
     tl1.fromTo(".section5__title span:nth-child(1)", {
-        opacity: 1
+        opacity: 0.25,
+    }, {
+        opacity: 1,
+        duration:  0.04,
+        ease: "none",
+    } , "<+=0.67");
+    tl1.fromTo(".section5__title span:nth-child(1)", {
+        opacity: 1,
     }, {
         opacity: 0.25,
-        duration:  0.125,
+        duration:  0.04,
         ease: "none",
-    } , "<+=0.65");
+    } , ">+=0.11");
+
+    tl1.fromTo(".section5__title span:nth-child(2)", {
+        opacity: 0.25,
+    }, {
+        opacity: 1,
+        duration:  0.04,
+        ease: "none",
+    } , ">-=0.09");
+    tl1.fromTo(".section5__title span:nth-child(2)", {
+        opacity: 1,
+    }, {
+        opacity: 0.25,
+        duration:  0.04,
+        ease: "none",
+    } , ">+=0.07");
+
     tl1.fromTo(".section5__title span:nth-child(3)", {
         opacity: 0.25,
     }, {
         opacity: 1,
-        duration:  0.075,
+        duration:  0.04,
         ease: "none",
-    } , ">");
+    } , ">-=0.1");
     tl1.fromTo(".section5__title span:nth-child(3)", {
         opacity: 1,
     }, {
         opacity: 0.25,
-        duration:  0.125,
+        duration:  0.04,
         ease: "none",
-    } , ">+=0.1");
-    tl1.fromTo(".section5__title span:nth-child(5)", {
-        opacity: 0.25,
-    }, {
-        opacity: 1,
-        duration:  0.075,
-        ease: "none",
-    } , ">");
+    } , ">+=0.10");
+
+
+
+
     tl1.addLabel('surfaces', "+=0.54");
     // tl1.fromTo(".section6", {
     //     y: '100%',
@@ -557,24 +624,18 @@ function initScrollAnimationDesktop(){
     document.addEventListener('scroll', function() {
         const posTop = section7.getBoundingClientRect().top;
 
-        // Блок достиг верхней границы экрана (или выше)
-      //   elem.classList.toggle('visible', posTop <= 0);
         if(posTop <= $(window).innerHeight() / 3) {
             let balon = document.querySelector(".section7__picture")
             balon.classList.add("active")
-
         }
 
-        // Блок только появляется снизу (или выше)
-        //   if(posTop < window.innerHeight) {
-        //       let balon = document.querySelector(".section7__picture")
-        //       balon.classList.add("active")
+        let headerHeight = $('.fixed-header').outerHeight();
+        if (posTop <= headerHeight){
+            $('.fixed-header').css('margin-top', posTop-headerHeight);
+        } else {
+            $('.fixed-header').css('margin-top', 0);
+        }
 
-        //   }
-      //   elem.classList.toggle('visible', posTop < window.innerHeight);
-
-        // Блок целиком находится в видимой зоне
-      //   elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
       });
     }
 

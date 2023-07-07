@@ -56,6 +56,7 @@
 					height: 100%;
 					object-fit: contain;
 					object-position: left center;
+					display: block;
 				}
 				span{
 					position: absolute;
@@ -100,15 +101,30 @@
 	width: 100%;
 	z-index: 100;
 
-	background: #e8e6e7;
 	padding-top: vw(5);
 	padding-bottom: vw(5);
 	align-items: center;
-	box-shadow: 0 0 vw(5) #c9c4c1;
+	box-shadow: 0 0 vw(5) rgba(105, 105, 105, 0.5);
 	transition: transform 0.3s ease;
+	height: auto;
+
+	backdrop-filter: blur(6px);
+	background: rgb(255 255 255 / 30%);
 
 	&:not(.active){
 		transform: translateY(-100%);
+	}
+	a {
+		color: #000000;
+	}
+	.header__btn{
+		height: vw(40);
+		border: 1px solid #191919;
+		background: transparent;
+		&:hover{
+			color: #ffffff;
+			background: #191919;
+		}
 	}
 
 	@include max(md) {

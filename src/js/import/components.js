@@ -63,6 +63,10 @@ $(document).ready(function () {
     $(window).on('resize',function (){
         setCssRootVars();
     });
+
+    $('.swiper-button-next.material-foto--button').on('click',function (){
+       $(this).addClass('active')
+    });
 });
 function setCssRootVars() {
     let baseRatio = 2010 / 1080;
