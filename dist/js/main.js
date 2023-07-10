@@ -581,21 +581,21 @@ function initScrollAnimationDesktop() {
     y: '-38%',
     duration: 1.03,
     ease: "none"
-  }, ">-=1");
+  }, ">-=0.7");
   tl1.fromTo(".section5__title span:nth-child(1)", {
     opacity: 0.25
   }, {
     opacity: 1,
-    duration: 0.04,
+    duration: 0,
     ease: "none"
-  }, "<+=0.67");
+  }, "<");
   tl1.fromTo(".section5__title span:nth-child(1)", {
     opacity: 1
   }, {
     opacity: 0.25,
     duration: 0.04,
     ease: "none"
-  }, ">+=0.11");
+  }, ">+=0.77");
   tl1.fromTo(".section5__title span:nth-child(2)", {
     opacity: 0.25
   }, {
@@ -609,7 +609,7 @@ function initScrollAnimationDesktop() {
     opacity: 0.25,
     duration: 0.04,
     ease: "none"
-  }, ">+=0.07");
+  }, ">+=0.20");
   tl1.fromTo(".section5__title span:nth-child(3)", {
     opacity: 0.25
   }, {
@@ -617,14 +617,15 @@ function initScrollAnimationDesktop() {
     duration: 0.04,
     ease: "none"
   }, ">-=0.1");
-  tl1.fromTo(".section5__title span:nth-child(3)", {
-    opacity: 1
+  /*tl1.fromTo(".section5__title span:nth-child(3)", {
+      opacity: 1,
   }, {
-    opacity: 0.25,
-    duration: 0.04,
-    ease: "none"
-  }, ">+=0.10");
-  tl1.addLabel('surfaces', "+=0.54"); // tl1.fromTo(".section6", {
+      opacity: 0.25,
+      duration:  0.04,
+      ease: "none",
+  } , ">+=0.15");*/
+
+  tl1.addLabel('surfaces', "+=0.55"); // tl1.fromTo(".section6", {
   //     y: '100%',
   // }, {
   //     y: '0%',

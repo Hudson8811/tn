@@ -3951,15 +3951,11 @@ img {
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-left: 3.044982699vw;
-  padding-right: 3.044982699vw;
   padding-bottom: 1.937716263vw;
   box-sizing: border-box;
 }
 @media only screen and (max-width: 1100px) {
   .footer {
-    padding-left: 6.25vw;
-    padding-right: 6.25vw;
     padding-bottom: 0vw;
   }
 }
@@ -3989,6 +3985,8 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   display: none;
+  padding-left: 3.044982699vw;
+  padding-right: 3.044982699vw;
 }
 @media only screen and (max-width: 1100px) {
   .footer__top {
@@ -3996,6 +3994,8 @@ img {
     padding-top: 0;
     border-top: 1px solid #C7C7C7;
     display: flex;
+    padding-left: 6.25vw;
+    padding-right: 6.25vw;
   }
 }
 .footer__top--col:nth-child(1) {
@@ -4045,13 +4045,15 @@ img {
 }
 .footer__bottom {
   justify-content: space-between;
-  align-items: flex-start;
-  padding-right: 3.4602076125vw;
+  align-items: center;
   box-sizing: border-box;
+  padding-left: 3.044982699vw;
+  padding-right: 6.5051903114vw;
 }
 @media only screen and (max-width: 1100px) {
   .footer__bottom {
-    padding-right: 0;
+    padding-left: 6.25vw;
+    padding-right: 6.25vw;
     flex-flow: column nowrap;
   }
 }
@@ -4070,13 +4072,13 @@ img {
     margin-top: 14.0625vw;
   }
   .footer__bottom-col:nth-child(2) {
-    order: -1;
-  }
-  .footer__bottom-col:nth-child(3) {
     margin-top: 7.8125vw;
   }
-  .footer__bottom-col:nth-child(4) {
+  .footer__bottom-col:nth-child(3) {
     margin-top: 3.125vw;
+  }
+  .footer__bottom-col:nth-child(4) {
+    order: -1;
   }
 }
 .footer__bottom-menu {
@@ -4091,6 +4093,10 @@ img {
   .footer__bottom-menu li + li {
     margin-top: 3.125vw;
   }
+}
+.footer__bottom-menu a:hover {
+  transition: all 0.3s;
+  color: #ED1C24;
 }
 .footer__bottom-text {
   position: relative;
@@ -4108,10 +4114,6 @@ img {
     font-size: 3.75vw;
     line-height: 4.6875vw;
   }
-}
-.footer__bottom-text:hover {
-  transition: all 0.3s;
-  color: #ED1C24;
 }
 .footer__soc {
   position: relative;
@@ -6882,7 +6884,7 @@ img {
 }
 .section7__picture {
   position: relative;
-  width: 77.3702422145vw;
+  width: 65.7439446367vw;
   margin-left: auto;
   margin-right: auto;
   left: 0;
