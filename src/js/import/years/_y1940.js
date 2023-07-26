@@ -47,7 +47,8 @@ if ("IntersectionObserver" in window) {
 
 var material = new Swiper(".js--material", {
     direction: "vertical",
-    slidesPerView: 3,
+    //slidesPerView: 3,
+    slidesPerView: 3.7,
     spaceBetween: 16,
     centeredSlides: true,
     loop: false,

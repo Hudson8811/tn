@@ -161,7 +161,8 @@ if ("IntersectionObserver" in window) {
 
 var material = new swiper__WEBPACK_IMPORTED_MODULE_1__.Swiper(".js--material", {
   direction: "vertical",
-  slidesPerView: 3,
+  //slidesPerView: 3,
+  slidesPerView: 3.7,
   spaceBetween: 16,
   centeredSlides: true,
   loop: false,

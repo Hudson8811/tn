@@ -28,6 +28,8 @@
     display: flex;
     padding-top: vw(29);
     border-top: 2px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    max-width: 100%;
     @include max(md) {
       border-top: none;
       margin-bottom: vw2(23);
