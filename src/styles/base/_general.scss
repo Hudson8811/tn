@@ -103,6 +103,17 @@ img{
 		font-size: vw2(12);
 		line-height: vw2(15);
 	}
+	&--smaller-for-seq-cards{
+		font-size: 0.95vw;
+		line-height: 1.2;
+		@include max(md){
+			font-size: vw2(7);
+			line-height: 1.2;
+		}
+		@include max(sm) {
+			font-size: vw2(9);
+		}
+	}
 }
 
 

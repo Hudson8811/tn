@@ -477,6 +477,86 @@ function initScrollAnimationDesktop() {
     ease: "none"
   }, ">-=0.6"); //1.2
 
+  /*
+      tl1.fromTo(".section2__title span:nth-child(1)", {
+          opacity: 0.25
+      }, {
+          opacity: 1,
+          duration:  0.05,
+          ease: "none"
+      } , "<+=0.45");
+      tl1.fromTo(".section2__title span:nth-child(1)", {
+          opacity: 1
+      }, {
+          opacity: 0.25,
+          duration:  0.05,
+          ease: "none",
+      } , ">+=0.15");
+  
+      tl1.fromTo(".section2__title span:nth-child(2)", {
+          opacity: 0.25,
+      }, {
+          opacity: 1,
+          duration:  0.05,
+          ease: "none",
+          onReverseComplete: function (){
+              $('.fixed-header').removeClass('active')
+          }
+      } , ">-=0.10");
+      tl1.fromTo(".section2__title span:nth-child(2)", {
+          opacity: 1,
+      }, {
+          opacity: 0.25,
+          duration:  0.05,
+          ease: "none",
+      } , ">+=0.15");
+  
+      tl1.fromTo(".section2__title span:nth-child(3)", {
+          opacity: 0.25,
+      }, {
+          opacity: 1,
+          duration:  0.05,
+          ease: "none",
+      } , ">-=0.10");
+      tl1.fromTo(".section2__title span:nth-child(3)", {
+          opacity: 1,
+      }, {
+          opacity: 0.25,
+          duration:  0.05,
+          ease: "none",
+      } , ">+=0.15");
+  
+      tl1.fromTo(".section2__title span:nth-child(4)", {
+          opacity: 0.25,
+      }, {
+          opacity: 1,
+          duration:  0.05,
+          ease: "none",
+      } , ">-=0.15");
+      tl1.fromTo(".section2__title span:nth-child(4)", {
+          opacity: 1,
+      }, {
+          opacity: 0.25,
+          duration:  0.05,
+          ease: "none",
+      } , ">+=0.15");
+  
+      tl1.fromTo(".section2__title span:nth-child(5)", {
+          opacity: 0.25,
+      }, {
+          opacity: 1,
+          duration:  0.05,
+          ease: "none",
+      } , ">-=0.10");
+      tl1.fromTo(".section2__title span:nth-child(5)", {
+          opacity: 1,
+      }, {
+          opacity: 0.25,
+          duration:  0.05,
+          ease: "none",
+      } , ">+=0.15");
+  */
+
   tl1.fromTo(".section2__title span:nth-child(1)", {
     opacity: 0.25
   }, {
@@ -500,7 +580,7 @@ function initScrollAnimationDesktop() {
     onReverseComplete: function onReverseComplete() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fixed-header').removeClass('active');
     }
-  }, ">-=0.10");
+  }, ">-=0.05");
   tl1.fromTo(".section2__title span:nth-child(2)", {
     opacity: 1
   }, {
@@ -514,7 +594,7 @@ function initScrollAnimationDesktop() {
     opacity: 1,
     duration: 0.05,
     ease: "none"
-  }, ">-=0.10");
+  }, ">-=0.05");
   tl1.fromTo(".section2__title span:nth-child(3)", {
     opacity: 1
   }, {
@@ -528,22 +608,8 @@ function initScrollAnimationDesktop() {
     opacity: 1,
     duration: 0.05,
     ease: "none"
-  }, ">-=0.15");
+  }, ">-=0.00");
   tl1.fromTo(".section2__title span:nth-child(4)", {
-    opacity: 1
-  }, {
-    opacity: 0.25,
-    duration: 0.05,
-    ease: "none"
-  }, ">+=0.15");
-  tl1.fromTo(".section2__title span:nth-child(5)", {
-    opacity: 0.25
-  }, {
-    opacity: 1,
-    duration: 0.05,
-    ease: "none"
-  }, ">-=0.10");
-  tl1.fromTo(".section2__title span:nth-child(5)", {
     opacity: 1
   }, {
     opacity: 0.25,
