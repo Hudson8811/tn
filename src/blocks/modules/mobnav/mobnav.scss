@@ -158,7 +158,8 @@
 	&.fixed{
 		position: fixed;
 		backdrop-filter: blur(6px);
-		background: rgb(255 255 255 / 30%);
+		//background: rgb(255 255 255 / 30%);
+    background: #fff;
 		.nav-container{
 			padding-top: vw2(5);
 			padding-bottom: vw2(5);
@@ -168,11 +169,29 @@
 			transform: translateY(-100%);
 		}
 		&.active{
-			box-shadow: 0 0 vw2(5) rgba(105, 105, 105, 0.5);
+		//	box-shadow: 0 0 vw2(5) rgba(105, 105, 105, 0.5);
 		}
 		&.animate{
 			transition: transform 0.2s ease, box-shadow 0.2s ease;
 		}
 	}
+
+}
+
+.mob-nav-btn-wrap{
+  display: block;
+  width: calc(100% - 6.25vw - 6.25vw);
+  margin-top: 5.625vw;
+
+}
+
+.mob-nav-btn{
+  background: #ED1C24 !important;
+  border-color: #ED1C24 !important;
+  color: #fff !important;
+  display: flex !important;
+  position: static !important;
+  width: 100% !important;
+  height: 9vw;
 
 }

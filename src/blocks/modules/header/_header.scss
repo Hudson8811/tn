@@ -111,8 +111,9 @@
 	transition: transform 0.3s ease;
 	height: auto;
 
-	backdrop-filter: blur(6px);
-	background: rgb(255 255 255 / 30%);
+	//backdrop-filter: blur(6px);
+	//background: rgb(255 255 255 / 30%);
+	background: #fff;
 
 	&:not(.active){
 		transform: translateY(-100%);
@@ -124,9 +125,12 @@
 		height: vw(40);
 		border: 1px solid #191919;
 		background: transparent;
+		color: #ffffff;
+		background: #191919;
 		&:hover{
 			color: #ffffff;
-			background: #191919;
+			background: #ED1C24;
+			border-color: #ED1C24;
 		}
 	}
 

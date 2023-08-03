@@ -3936,8 +3936,7 @@ img {
   box-shadow: none;
   transition: transform 0.3s ease;
   height: auto;
-  backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.3);
+  background: #fff;
 }
 .fixed-header:not(.active) {
   transform: translateY(-100%);
@@ -3949,10 +3948,13 @@ img {
   height: 2.76816609vw;
   border: 1px solid #191919;
   background: transparent;
+  color: #ffffff;
+  background: #191919;
 }
 .fixed-header .header__btn:hover {
   color: #ffffff;
-  background: #191919;
+  background: #ED1C24;
+  border-color: #ED1C24;
 }
 @media only screen and (max-width: 1100px) {
   .fixed-header {
@@ -5752,7 +5754,7 @@ img {
 .navbar.fixed {
   position: fixed;
   backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.3);
+  background: #fff;
 }
 .navbar.fixed .nav-container {
   padding-top: 1.5625vw;
@@ -5761,11 +5763,24 @@ img {
 .navbar.fixed:not(.active) {
   transform: translateY(-100%);
 }
-.navbar.fixed.active {
-  box-shadow: 0 0 1.5625vw rgba(105, 105, 105, 0.5);
-}
 .navbar.fixed.animate {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mob-nav-btn-wrap {
+  display: block;
+  width: calc(100% - 6.25vw - 6.25vw);
+  margin-top: 5.625vw;
+}
+
+.mob-nav-btn {
+  background: #ED1C24 !important;
+  border-color: #ED1C24 !important;
+  color: #fff !important;
+  display: flex !important;
+  position: static !important;
+  width: 100% !important;
+  height: 9vw;
 }
 
 .home-page-preloader {
@@ -6879,7 +6894,7 @@ img {
   padding-left: 2.6297577855vw;
   padding-right: 2.6297577855vw;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: calc(100vh - 200px);
 }
 @media only screen and (max-width: 1100px) {
   .section7 {
@@ -6891,6 +6906,7 @@ img {
     padding-left: 6.25vw;
     padding-right: 6.25vw;
     padding-bottom: 0vw;
+    min-height: 75vh;
   }
 }
 @media only screen and (max-width: 699px) {

@@ -1168,7 +1168,7 @@
 	padding-left: vw(38);
 	padding-right: vw(38);
 	box-sizing: border-box;
-	min-height: 100vh;
+    min-height: calc(100vh - 200px);
 
 	@include max(md) {
 		position: relative;
@@ -1179,6 +1179,7 @@
 		padding-left: vw2(20);
 		padding-right: vw2(20);
 		padding-bottom: vw2(0);
+		min-height: 75vh;
 	}
 
 	@include max(sm) {

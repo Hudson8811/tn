@@ -162,14 +162,20 @@ if ("IntersectionObserver" in window) {
 var material = new swiper__WEBPACK_IMPORTED_MODULE_1__.Swiper(".js--material", {
   direction: "vertical",
   //slidesPerView: 3,
-  slidesPerView: 3.7,
+  slidesPerView: 3,
   spaceBetween: 16,
   centeredSlides: true,
   loop: false,
   pagination: true,
   autoHeight: true,
   slideToClickedSlide: true,
-  speed: 300
+  speed: 300,
+  breakpoints: {
+    // when window width is >= 700px
+    700: {
+      slidesPerView: 3.7
+    }
+  }
 });
 var materialFoto = new swiper__WEBPACK_IMPORTED_MODULE_1__.Swiper(".js--material-foto", {
   direction: 'horizontal',
