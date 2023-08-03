@@ -1275,8 +1275,15 @@
 		color: #fff;
 		position: relative;
 		z-index: 31;
+		display: flex;
+		justify-content: flex-end;
+		@include max(md) {
+			display: block;
+		}
 	}
+	&__title-inner{
 
+	}
 	&__button {
 		background: #fff;
 		position: absolute;
