@@ -660,37 +660,45 @@ function initScrollAnimationDesktop() {
     opacity: 1
   }, {
     opacity: 0.25,
-    duration: 0.04,
+    duration: 0.03,
     ease: "none"
   }, ">+=0.77");
   tl1.fromTo(".section5__title span:nth-child(2)", {
     opacity: 0.25
   }, {
     opacity: 1,
-    duration: 0.04,
+    duration: 0.03,
     ease: "none"
-  }, ">-=0.09");
+  }, ">-=0.01");
   tl1.fromTo(".section5__title span:nth-child(2)", {
     opacity: 1
   }, {
     opacity: 0.25,
-    duration: 0.04,
+    duration: 0.03,
     ease: "none"
   }, ">+=0.20");
   tl1.fromTo(".section5__title span:nth-child(3)", {
     opacity: 0.25
   }, {
     opacity: 1,
-    duration: 0.04,
+    duration: 0.03,
     ease: "none"
-  }, ">-=0.1");
+  }, ">-=0.01");
+  tl1.fromTo(".section5__title span:nth-child(3)", {
+    opacity: 0.25
+  }, {
+    opacity: 1,
+    duration: 0.03,
+    ease: "none"
+  }, ">-=0.01");
   /*tl1.fromTo(".section5__title span:nth-child(3)", {
       opacity: 1,
   }, {
       opacity: 0.25,
-      duration:  0.04,
+      duration:  0.02,
       ease: "none",
-  } , ">+=0.15");*/
+  } , ">+=0.01");
+  */
 
   tl1.addLabel('surfaces', "+=0.55"); // tl1.fromTo(".section6", {
   //     y: '100%',
