@@ -685,7 +685,7 @@ function initScrollAnimationDesktop() {
     ease: "none"
   }, ">-=0.01");
   tl1.fromTo(".section5__title span:nth-child(3)", {
-    opacity: 0.25
+    opacity: 1
   }, {
     opacity: 1,
     duration: 0.03,
