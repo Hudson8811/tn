@@ -3928,10 +3928,12 @@ img {
   left: 0;
   width: 100%;
   z-index: 100;
-  padding-top: 0.3460207612vw;
-  padding-bottom: 0.3460207612vw;
+  /*padding-top: vw(5);
+  padding-bottom: vw(5);*/
+  padding-top: 1vw;
+  padding-bottom: 1vw;
   align-items: center;
-  box-shadow: 0 0 0.3460207612vw rgba(105, 105, 105, 0.5);
+  box-shadow: none;
   transition: transform 0.3s ease;
   height: auto;
   backdrop-filter: blur(6px);
